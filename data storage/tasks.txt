@@ -1,0 +1,4 @@
+IA---------Clean your room
+C-A--------Sweep the kitchen
+I----------Mow the Lawn
+C---------AEmpty the dishwasher
