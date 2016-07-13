@@ -1,4 +1,6 @@
 c|Bob|Clean kitchen
+
+
 c|Mary|Vacuum the living room carpet
 i|Lisa|Wash the bathtub
 i|Joe|Do the dishes
@@ -20,3 +22,7 @@ i|Lisa|Weed the flower pots on porch
 c|Joe|Make bedsi|Bob|sweep
 i|Joe|Wash the dog
 i|Lisa|feed the kittens
+c|Linda|Vacuum the living room carpet
+i|Tina|Wash the bathtub
+i|Gene|Do the dishes
+

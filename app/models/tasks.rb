@@ -44,7 +44,7 @@ class Task
 
 	def Task.familyMemberToDos(name)
 		tasksToBeDone = Array.new
-		Task.familyMemberIncompleteTasks(name) do |element|
+		Task.familyMemberIncompleteTasks(name).each do |element|
 			tasksToBeDone << element[2]
 		end
 		return tasksToBeDone
@@ -101,10 +101,12 @@ class Task
 
 
 	def Task.deleteTask(num)
-		tasks = Task.searchForName
-		tasks.delete_at(num)
-		File.open("tasks.txt", "w") do |i|
-			i.puts(tasks)
+		n = num.to_i 
+		t = Task.searchForName
+		t.delete_at(n)
+		File.delete("tasks.txt")
+		File.open("tasks.txt", "a")
+		
 		end
 	end
 
