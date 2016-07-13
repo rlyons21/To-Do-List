@@ -17,4 +17,6 @@ i|Bob|Mop the mud room floor
 i|Mary|Clean the fish bowl
 i|Mary|Wash the pans
 i|Lisa|Weed the flower pots on porch
-c|Joe|Make beds
+c|Joe|Make bedsi|Bob|sweep
+i|Joe|Wash the dog
+i|Lisa|feed the kittens
