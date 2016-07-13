@@ -44,7 +44,7 @@ class Task
 
 	def Task.familyMemberToDos(name)
 		tasksToBeDone = Array.new
-		Task.familyMemberIncompleteTasks(name) do |element|
+		Task.familyMemberIncompleteTasks(name).each do |element|
 			tasksToBeDone << element[2]
 		end
 		return tasksToBeDone

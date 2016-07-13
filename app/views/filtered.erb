@@ -1,8 +1,27 @@
 <h1> X's Tasks</h1>
 
 <h3> To Do </h3>
-
-
-
+<% if @theseAreNotDone != nil %>
+	<% @theseAreNotDone.each do |element| %>
+		<p><%= element %></p>
+		<form method="post" action="/delete"> 
+			<input type="hidden" name="num" value ="0">
+			<input type="submit" value="Delete">
+		</form>
+	<% end %>
+<% else %>
+	<p> There are no tasks </p>
+<% end %>
 
 <h3> Completed Tasks </h3>
+<% if @theseAreDone != nil %>
+	<% @theseAreDone.each do |element| %>
+		<p><%= element %></p>
+		<form method="post" action="/delete"> 
+			<input type="hidden" name="num" value ="0">
+			<input type="submit" value="Delete">
+		</form>
+	<% end %>
+<% else %>
+	<p> There are no tasks </p>
+<% end %>
