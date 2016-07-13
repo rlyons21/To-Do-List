@@ -11,6 +11,10 @@
 	</ul>
 </div>
 
+<!-- 
+TODO - Reconsider BEM structure below. Each task should be a <li>.
+ -->
+
 <h1 class="TaskList">To Do List</h1>
 <% @incompleteTasks.each do |element| %>
 	<p class = "TaskList__item"><%= element %></p>
