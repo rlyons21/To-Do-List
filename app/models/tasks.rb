@@ -1,10 +1,17 @@
 class Task
 
+# This function is supposed to split the strings stored in the text fine to separate them into different elements so that each element can be used or returned as needed
 	def Task.searchForName
+		separatedTasks = Array.new
 		file = File.open("tasks.txt","r")
 		file.each_line do |line|
-			line.split("|")
-			puts line
+			l = line.split("|")
+			separatedTasks << l
 		end
+		return separatedTasks
 	end
+
+	def Task.searchForBob
+		Task.searchForName.each do |elements|
+			@tasksarray = Task.searchForName
 end
