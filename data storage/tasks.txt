@@ -1,4 +1,0 @@
-c|Bob|Clean kitchen
-c|Linda|Vacuum the living room carpet
-i|Tina|Wash the bathtub
-i|Gene|Do the dishes
