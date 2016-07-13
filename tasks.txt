@@ -1,20 +1,4 @@
 c|Bob|Clean kitchen
-c|Mary|Vacuum the living room carpet
-i|Lisa|Wash the bathtub
-i|Joe|Do the dishes
-i|Bob|Scoop the cat litter
-i|Bob|Mop the mud room floor
-i|Bob|Clean the fish bowl
-i|Bob|Change the AC filter
-i|Joe|Sweep the porch
-c|Joe|Make beds
-c|Bob|Mop the basement
-c|Mary|Vacuum the living room carpet
-i|Lisa|Wash the bathtub
-i|Joe|Do the dishes
-i|Bob|Scoop the cat litter
-i|Bob|Mop the mud room floor
-i|Mary|Clean the fish bowl
-i|Mary|Wash the pans
-i|Lisa|Weed the flower pots on porch
-c|Joe|Make beds
+c|Linda|Vacuum the living room carpet
+i|Tina|Wash the bathtub
+i|Gene|Do the dishes
