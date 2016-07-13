@@ -9,13 +9,12 @@
 </ul>
 
 <h1>To Do List</h1>
-<% @variable.each do |element| %>
+<% @incompleteTasks.each do |element| %>
 	<p><%= element %></p>
-
 <% end %>
 
-
-
 <h1>Completed Tasks</h1>
-
+<% @completedTasks.each do |element| %>
+	<p><%= element %></p>
+<% end %>
 
