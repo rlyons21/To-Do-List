@@ -9,19 +9,12 @@
 </ul>
 
 <h1>To Do List</h1>
-<<<<<<< HEAD
-<% @variable.each do |element| %>
-	<% counter = 0 %>
+<% @incompleteTasks.each do |element| %>
 	<p><%= element %></p>
 	<form method="post" action="/delete"> 
 		<input type="hidden" name="num" value ="0">
 		<input type="submit" value="Delete">
 	</form>
-	<%counter += 1 %>
-=======
-<% @incompleteTasks.each do |element| %>
-	<p><%= element %></p>
->>>>>>> 24916fae096ed2d40ea0e19490ea23b0e7c4ee75
 <% end %>
 
 <h1>Completed Tasks</h1>
