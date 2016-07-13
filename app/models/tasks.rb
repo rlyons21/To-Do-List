@@ -10,8 +10,4 @@ class Task
 		end
 		return separatedTasks
 	end
-
-	def Task.searchForBob
-		Task.searchForName.each do |elements|
-			@tasksarray = Task.searchForName
 end
