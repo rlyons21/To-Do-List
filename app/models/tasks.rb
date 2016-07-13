@@ -24,7 +24,7 @@ class Task
 
 	def Task.bobCompletedTasks
 		bobComplete = Array.new
-		Tasks.searchForBob.each do |element|
+		Task.searchForBob.each do |element|
 			if element[0] == "c"
 				bobComplete << element
 			end
@@ -34,7 +34,7 @@ class Task
 
 	def Task.bobIncompleteTasks
 		bobIncomplete = Array.new
-		Tasks.searchForBob.each do |element|
+		Task.searchForBob.each do |element|
 			if element[0] == "i"
 				bobIncomplete << element
 			end
@@ -42,6 +42,13 @@ class Task
 		return bobIncomplete
 	end	
 
+	def Task.bobsToDos
+		tasksToBeDone = Array.new
+		Task.bobIncompleteTasks.each do |element|
+			tasksToBeDone << element[2]
+		end
+		return tasksToBeDone
+	end
 
 # This is the end for the class	
 end

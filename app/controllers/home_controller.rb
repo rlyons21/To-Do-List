@@ -1,5 +1,5 @@
 MyApp.get "/" do
-	@variable = Task.searchForBob
+	@variable = Task.bobsToDos
 	erb :"home"
 
 end
