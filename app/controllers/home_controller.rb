@@ -15,3 +15,8 @@ end
 MyApp.get "/edit" do
 	erb :"edit"
 end
+
+MyApp.post '/delete' do
+		Task.deleteTask(params[:num])
+		redirect '/'
+	end

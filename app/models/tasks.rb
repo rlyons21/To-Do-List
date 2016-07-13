@@ -50,6 +50,15 @@ class Task
 		return tasksToBeDone
 	end
 
+	def Task.deleteTask(num)
+		tasks = Task.searchForName
+		tasks.delete_at(num)
+		File.open("tasks.txt", "w") do |i|
+			i.puts(tasks)
+		end
+	end
+
+
 # This is the end for the class	
 end
 
