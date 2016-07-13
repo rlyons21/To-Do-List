@@ -1,11 +1,11 @@
-require_relative '../test_helper'
+require 'test_helper'
 
 class TaskTest < Minitest::Test
-	def setup
-    	super
-    end   
- 	def test_searchForName
-  		@names = Task.searchForName
-  		puts @names
-  	end
+
+	def test_separate_tasks_in_file
+		
+
+	end
+
+
 end
