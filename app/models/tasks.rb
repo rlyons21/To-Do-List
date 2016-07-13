@@ -8,10 +8,40 @@ class Task
 			l = line.split("|")
 			separatedTasks << l
 		end
+
 		return separatedTasks
 	end
 
 	def Task.searchForBob
-		Task.searchForName.each do |elements|
-			@tasksarray = Task.searchForName
+		bobTasks = Array.new
+		Task.searchForName.each do |element|
+			if element[1] == "Bob"
+				bobTasks << element
+			end
+		end
+		return bobTasks
+	end
+
+	def Task.bobCompletedTasks
+		bobComplete = Array.new
+		Tasks.searchForBob.each do |element|
+			if element[0] == "c"
+				bobComplete << element
+			end
+		end
+		return bobComplete
+	end
+
+	def Task.bobIncompleteTasks
+		bobIncomplete = Array.new
+		Tasks.searchForBob.each do |element|
+			if element[0] == "i"
+				bobIncomplete << element
+			end
+		end
+		return bobIncomplete
+	end	
+
+
+# This is the end for the class	
 end
