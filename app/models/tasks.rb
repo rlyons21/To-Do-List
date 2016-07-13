@@ -11,9 +11,6 @@ class Task
 
 		return separatedTasks
 	end
-<<<<<<< HEAD
-end
-=======
 
 	def Task.searchForBob
 		bobTasks = Array.new
@@ -55,4 +52,4 @@ end
 
 # This is the end for the class	
 end
->>>>>>> 95e8735c8e6fc607ff9532851bf2fa7349f58cbf
+
