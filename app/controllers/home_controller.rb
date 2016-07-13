@@ -1,5 +1,6 @@
 MyApp.get "/" do
-	@variable = Task.bobsToDos
+	@completedTasks = Task.done
+	@incompleteTasks = Task.notDone
 	erb :"home"
 
 end
