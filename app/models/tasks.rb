@@ -108,7 +108,7 @@ class Task
 		File.open("tasks.txt", "a")
 		
 		end
-	end
+	
 
 # This is the end for the class	
 end
