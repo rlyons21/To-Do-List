@@ -17,8 +17,7 @@ MyApp.post "/new/process" do
 	somefile = File.open("tasks.txt", "a")
 	somefile.puts "i|#{@new_person}|#{@new_task}"
 	somefile.close
-    erb :"process"
-    redirect '/'
+  redirect '/'
 end
 
 
