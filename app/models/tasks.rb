@@ -106,8 +106,6 @@ class Task
 		t.delete_at(n)
 		File.delete("tasks.txt")
 		File.open("tasks.txt", "a")
-		
-		end
 	end
 
 # This is the end for the class	

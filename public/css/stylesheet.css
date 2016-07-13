@@ -1,3 +1,10 @@
-.hello{
-	background-color:blue;
+body{
+	margin:0;
+	background-color:#CCC3F8;
 }
+
+.familyName{
+	font-family:"Cosmic-Sans MS";
+	color: #203719;
+}
+
