@@ -1,32 +1,32 @@
-	<form>
+	<form action="/new" method="get">
 		<div>
 			<input type="text" name="task">
 		</div>
 
 		<div>
 		  <label>
-		   <input type="checkbox" name="q1" value="true">
+		   <input type="radio" name="person" value="Bob">
 		    Bob
 		  </label>
 		</div>
 
 		<div>
 		  <label>
-		    <input type="checkbox" name="q2" value="true">
+		    <input type="radio" name="person" value="Mary">
 		    Mary
 		  </label>
 		</div>
 
 		<div>
 		  <label>
-		    <input type="checkbox" name="q3" value="true">
+		    <input type="radio" name="person" value="Joe">
 		    Joe
 		  </label>
 		</div>
 
 		<div>
 		  <label>
-		    <input type="checkbox" name="q4" value="true">
+		    <input type="radio" name="person" value="Lisa">
 		    Lisa
 		  </label>
 		</div>
@@ -34,3 +34,10 @@
 
 		<input type="submit">
 	</form>
+
+<% @new_person = params[:person] %>
+<%	@new_task = params[:task] %>
+	<p><%puts @new_person %></p>
+	<p><%puts @new_task %></p>	
+
+
