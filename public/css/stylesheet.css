@@ -1,3 +1,25 @@
-.hello{
-	background-color:blue;
+body{
+	margin:0;
+	background-color:#CCC3F8;
+}
+
+.navLinks{
+	list-style: none;
+}
+
+.navLinks__item{
+	text-decoration: none;
+}
+
+.familyName{
+	font-family:Cursive;
+	color: #203719;
+}
+
+.taskList{
+
+}
+
+.taskList__item{
+
 }
