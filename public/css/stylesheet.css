@@ -3,8 +3,23 @@ body{
 	background-color:#CCC3F8;
 }
 
+.navLinks{
+	list-style: none;
+}
+
+.navLinks__item{
+	text-decoration: none;
+}
+
 .familyName{
-	font-family:"Cosmic-Sans MS";
+	font-family:Cursive;
 	color: #203719;
 }
 
+.taskList{
+
+}
+
+.taskList__item{
+
+}
