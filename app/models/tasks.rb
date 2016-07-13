@@ -11,9 +11,6 @@ class Task
 
 		return separatedTasks
 	end
-<<<<<<< HEAD
-end
-=======
 
 	def Task.searchForBob
 		bobTasks = Array.new
@@ -27,7 +24,7 @@ end
 
 	def Task.bobCompletedTasks
 		bobComplete = Array.new
-		Tasks.searchForBob.each do |element|
+		Task.searchForBob.each do |element|
 			if element[0] == "c"
 				bobComplete << element
 			end
@@ -37,7 +34,7 @@ end
 
 	def Task.bobIncompleteTasks
 		bobIncomplete = Array.new
-		Tasks.searchForBob.each do |element|
+		Task.searchForBob.each do |element|
 			if element[0] == "i"
 				bobIncomplete << element
 			end
@@ -45,7 +42,14 @@ end
 		return bobIncomplete
 	end	
 
+	def Task.bobsToDos
+		tasksToBeDone = Array.new
+		Task.bobIncompleteTasks.each do |element|
+			tasksToBeDone << element[2]
+		end
+		return tasksToBeDone
+	end
 
 # This is the end for the class	
 end
->>>>>>> 95e8735c8e6fc607ff9532851bf2fa7349f58cbf
+

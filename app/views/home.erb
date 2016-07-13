@@ -9,7 +9,11 @@
 </ul>
 
 <h1>To Do List</h1>
-<%= @variable %>
+<% @variable.each do |element| %>
+	<p><%= element %></p>
+
+<% end %>
+
 
 
 <h1>Completed Tasks</h1>
