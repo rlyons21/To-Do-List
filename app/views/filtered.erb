@@ -1,7 +1,13 @@
 <h1> X's Tasks</h1>
 
+<!-- 
+TODO - In Ruby, it's better to call the `.nil?` function
+than to use `==` to see if something is `nil`. One example
+below, then you do the other one yourself.
+ -->
+
 <h3> To Do </h3>
-<% if @theseAreNotDone != nil %>
+<% if !@theseAreNotDone.nil? %>
 	<% @theseAreNotDone.each do |element| %>
 		<p><%= element %></p>
 		<form method="post" action="/delete"> 
