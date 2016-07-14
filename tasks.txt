@@ -1,11 +1,11 @@
-i|Joe|Do the dishes|98174836
-i|Bob|Scoop the cat litter|98174236
 i|Bob|Mop the mud room floor|38374236
 i|Bob|Clean the fish bowl|28374416
 i|Bob|Change the AC filter|28354455
 i|Joe|Sweep the porch|68364455
-c|Joe|Make beds|68364456
-c|Bob|Mop the basement|68364457
-c|Mary|Vacuum the living room carpet|68364459
-
-
+i|Joe|Make beds|68364456
+i|Bob|Mop the basement|68364457
+i|Mary|Vacuum the living room carpet|68364459
+i|Joe|water the garden|70063973
+i|Mary|feed the fish|48450908
+i|Lisa|clean your room|84477141
+i|Lisa|dust the living room|83810105

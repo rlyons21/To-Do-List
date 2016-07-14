@@ -90,16 +90,26 @@ class Task
 	def Task.notDone(filename)
 		notDoneFamilyTasks = Array.new
 		Task.incompleteTasks(filename).each do |element|
-			notDoneFamilyTasks << element[2]
+			notDoneFamilyTasks << element
 		end
 		return notDoneFamilyTasks
 	end
 
 
 
+	def Task.findTask(filename, num)
+		count=0
+		file= File.open(filename,"r"){ |f| f.each_line {|line|
+			count += 1
+			return count if line =~ /#{num}/
+			}}
+		
+		
+	end
 
 	def Task.deleteTask(num,filename)
-		n = num.to_i 
+		num_index = Task.findTask(filename,num)
+		n = num_index.to_i 
 		t = Task.searchForName(filename)
 		t.delete_at(n)
 		i=0
