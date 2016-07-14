@@ -14,7 +14,6 @@ end
 MyApp.post "/new/process" do
 	@new_task = params[:task]
 	@new_person = params[:person]
-
 	@randomnumber = rand(99999999)
 
 	# TODO - Move the complexity about adding things to a 
