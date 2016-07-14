@@ -98,15 +98,19 @@ class Task
 
 
 
-	def Task.deleteTask()
+	def Task.deleteTask(num,filename)
 		n = num.to_i 
-		t = Task.searchForName
+		t = Task.searchForName(filename)
 		t.delete_at(n)
+		i=0
 		File.delete("tasks.txt")
-		File.open("tasks.txt", "a")
-
-		
-		end
+		File.open("tasks.txt", "a") { |f|
+			while i < t.length
+				f.puts t[i].join("|")
+				i += 1
+			end
+		}
+	end
 	
 
 
