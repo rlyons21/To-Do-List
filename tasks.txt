@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 i|Bob|Scoop the cat litter|98174236
+=======
+>>>>>>> 0ed242bf1462d696e25f43f271431ab40ad67176
 i|Bob|Mop the mud room floor|38374236
 i|Bob|Clean the fish bowl|28374416
 i|Bob|Change the AC filter|28354455
 i|Joe|Sweep the porch|68364455
+<<<<<<< HEAD
 c|Joe|Make beds|68364456
 c|Bob|Mop the basement|68364457
 c|Mary|Vacuum the living room carpet|68364459
@@ -15,3 +19,12 @@ i|Lisa|clean the car|15674532
 i|Joe|walk the dog|58228922
 c|Lisa|walk the hamster|62948448
 i|Bob|trim the hedges|61469762
+=======
+i|Joe|Make beds|68364456
+i|Bob|Mop the basement|68364457
+i|Mary|Vacuum the living room carpet|68364459
+i|Joe|water the garden|70063973
+i|Mary|feed the fish|48450908
+i|Lisa|clean your room|84477141
+i|Lisa|dust the living room|83810105
+>>>>>>> 0ed242bf1462d696e25f43f271431ab40ad67176
