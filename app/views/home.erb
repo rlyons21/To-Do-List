@@ -25,6 +25,12 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 			<input type="submit" value="Delete">
 		</form>
 	</ul>
+	
+	<form method="post" action="/"> 
+		<textarea class= "TaskList__item"> <%= element %> </textarea>
+		<input type="hidden" name="num" value="2">
+		<input type="submit" value="Delete">
+	</form>
 <% end %>
 
 <h1 class="ListTitle">Completed Tasks</h1>

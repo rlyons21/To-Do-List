@@ -1,9 +1,9 @@
 class Task
 
 # This function is supposed to split the strings stored in the text fine to separate them into different elements so that each element can be used or returned as needed
-	def Task.searchForName
+	def Task.searchForName(filename)
 		separatedTasks = Array.new
-		file = File.open("tasks.txt","r")
+		file = File.open(filename, "r")
 		file.each_line do |line|
 			l = line.split("|")
 			separatedTasks << l
@@ -12,9 +12,9 @@ class Task
 		return separatedTasks
 	end
 # For each family member that will be called with (name) the following functions split up the tasks into complete and incomplete and will print out those tasks.
-	def Task.searchForFamilyMember(name)
+	def Task.searchForFamilyMember(filename, name)
 		familyMemberTasks = Array.new
-		Task.searchForName.each do |element|
+		Task.searchForName(filename).each do |element|
 			if element[1] == name
 				familyMemberTasks << element
 			end
@@ -22,9 +22,9 @@ class Task
 		return familyMemberTasks
 	end
 
-	def Task.familyMemberCompletedTasks(name)
+	def Task.familyMemberCompletedTasks(filename, name)
 		familyMemberComplete = Array.new
-		Task.searchForFamilyMember(name).each do |element|
+		Task.searchForFamilyMember(filename, name).each do |element|
 			if element[0] == "c"
 				familyMemberComplete << element
 			end
@@ -32,9 +32,9 @@ class Task
 		return familyMemberComplete
 	end
 
-	def Task.familyMemberIncompleteTasks(name)
+	def Task.familyMemberIncompleteTasks(filename, name)
 		familyMemberIncomplete = Array.new
-		Task.searchForFamilyMember(name).each do |element|
+		Task.searchForFamilyMember(filename, name).each do |element|
 			if element[0] == "i"
 				familyMemberIncomplete << element
 			end
@@ -42,26 +42,26 @@ class Task
 		return familyMemberIncomplete
 	end	
 
-	def Task.familyMemberToDos(name)
+	def Task.familyMemberToDos(filename, name)
 		tasksToBeDone = Array.new
-		Task.familyMemberIncompleteTasks(name).each do |element|
+		Task.familyMemberIncompleteTasks(filename, name).each do |element|
 			tasksToBeDone << element[2]
 		end
 		return tasksToBeDone
 	end
 
-	def Task.familyMemberDone(name)
+	def Task.familyMemberDone(filename, name)
 		tasksDone = Array.new
-		Task.familyMemberCompletedTasks(name).each do |element|
+		Task.familyMemberCompletedTasks(filename, name).each do |element|
 			tasksDone << element[2]
 		end
 		return tasksDone
 	end
 	
 #This section is for sorting Tasks by complete and incomplete, and then functions for separating them for printing
-	def Task.completedTasks
+	def Task.completedTasks(filename)
 		completed = Array.new
-		Task.searchForName.each do |element|
+		Task.searchForName(filename).each do |element|
 			if element[0] == "c"
 				completed << element
 			end
@@ -69,17 +69,17 @@ class Task
 		return completed
 	end
 
-	def Task.done
-		taskstasks = Array.new
-		Task.completedTasks.each do |element|
-			taskstasks << element[2]
+	def Task.done(filename)
+		completedFamilyTasks = Array.new
+		Task.completedTasks(filename).each do |element|
+			completedFamilyTasks << element[2]
 		end
-		return taskstasks
+		return completedFamilyTasks
 	end
 
-	def Task.incompleteTasks
+	def Task.incompleteTasks(filename)
 		incompleteTasks = Array.new
-		Task.searchForName.each do |element|
+		Task.searchForName(filename).each do |element|
 			if element[0] == "i"
 				incompleteTasks << element
 			end
@@ -87,12 +87,12 @@ class Task
 		return incompleteTasks
 	end
 
-	def Task.notDone
-		taskstaskstasks = Array.new
-		Task.incompleteTasks.each do |element|
-			taskstaskstasks << element[2]
+	def Task.notDone(filename)
+		notDoneFamilyTasks = Array.new
+		Task.incompleteTasks(filename).each do |element|
+			notDoneFamilyTasks << element[2]
 		end
-		return taskstaskstasks
+		return notDoneFamilyTasks
 	end
 
 
@@ -100,7 +100,7 @@ class Task
 
 
 
-	def Task.deleteTask(num)
+	def Task.deleteTask()
 		n = num.to_i 
 		t = Task.searchForName
 		t.delete_at(n)

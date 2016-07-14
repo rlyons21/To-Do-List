@@ -1,6 +1,7 @@
 MyApp.get "/" do
-	@completedTasks = Task.done
-	@incompleteTasks = Task.notDone
+
+	@completedTasks = Task.done("tasks.txt")
+	@incompleteTasks = Task.notDone("tasks.txt")
 	erb :"home"
 
 end
