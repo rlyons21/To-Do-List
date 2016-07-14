@@ -12,36 +12,10 @@ c|Mary|Vacuum the living room carpet|68364459
 i|Lisa|Wash the bathtub|48344449
 i|Joe|Do the dishes|48344448
 i|Bob|Scoop the cat litter|48344447
-c|Bob|Clean kitchen
-c|Mary|Vacuum the living room carpet
-i|Lisa|Wash the bathtub
-i|Joe|Do the dishes
-i|Bob|Scoop the cat litter
-i|Bob|Mop the mud room floor
-i|Bob|Clean the fish bowl
-i|Bob|Change the AC filter
-i|Joe|Sweep the porch
-c|Joe|Make beds
-c|Bob|Mop the basement
-c|Mary|Vacuum the living room carpet
-i|Lisa|Wash the bathtub
-i|Joe|Do the dishes
-i|Bob|Scoop the cat litter
-i|Bob|Mop the mud room floor
-i|Mary|Clean the fish bowl
-i|Mary|Wash the pans
-i|Lisa|Weed the flower pots on porch
-c|Joe|Make beds
-i|Bob|sweep
-i|Joe|Wash the dog
-i|Lisa|feed the kittens
-c|Linda|Vacuum the living room carpet
-i|Tina|Wash the bathtub
-i|Gene|Do the dishes
-i|Mary|Fluff the pillows
-i|Gene|Do the dishesi|Lisa|dining room
-i|Bob|clean the mirror
-i|Mary|fly the kite
 i|Mary|Go to the store|19179746
 i|Bob|Nail the picture on the wall|90639210
 
+i|Lisa|clean the car|15674532
+i|Joe|walk the dog|58228922
+c|Lisa|walk the hamster|62948448
+c|Joe|feed the chickens|39428237

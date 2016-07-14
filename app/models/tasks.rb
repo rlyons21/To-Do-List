@@ -98,10 +98,8 @@ class Task
 
 
 
-	def Task.deleteTask()
-		n = num.to_i 
-		t = Task.searchForName
-		t.delete_at(n)
+	def Task.deleteTask("i|Bob|Nail the picture on the wall|90639210")
+		
 		File.delete("tasks.txt")
 		File.open("tasks.txt", "a")
 
