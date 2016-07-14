@@ -35,4 +35,4 @@ end
 MyApp.post '/delete' do
 	Task.deleteTask(params[:num],"tasks.txt")
 	redirect '/'
-	end
+end
