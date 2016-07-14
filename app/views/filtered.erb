@@ -1,3 +1,16 @@
+
+<div class="navContent">
+	<ul class=navLinks>
+		<li class="navigation"><a class="navLinks__addTask" href="/new">ADD A TASK</a></li>
+		<li class="navigation"><a class="navLinks__link" href="/">All Tasks</a></li>
+		<li class="navigation"><a class="navLinks__link" href="/filtered?user=Bob">Bob</a></li>
+		<li class="navigation"><a class="navLinks__link" href="/filtered?user=Mary">Mary</a></li>
+		<li class="navigation"><a class="navLinks__link" href="/filtered?user=Joe">Joe</a></li>
+		<li class="navigation"><a class="navLinks__link" href="/filtered?user=Lisa">Lisa</a></li>
+	</ul>
+</div>
+
+
 <div class="mainContent">
 	<h1> X's Tasks</h1>
 
@@ -7,7 +20,7 @@
 	below, then you do the other one yourself.
 	 -->
 
-	<h3> To Do </h3>
+	<h3 class="listTitle"> To Do </h3>
 	<% if !@theseAreNotDone.nil? %>
 		<% @theseAreNotDone.each do |element| %>
 			<p><%= element %></p>
@@ -20,7 +33,7 @@
 		<p> There are no tasks </p>
 	<% end %>
 
-	<h3> Completed Tasks </h3>
+	<h3 class="listTitle"> Completed Tasks </h3>
 	<% if @theseAreDone != nil %>
 		<% @theseAreDone.each do |element| %>
 			<p><%= element %></p>
