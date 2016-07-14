@@ -4,9 +4,10 @@ body{
 	background-color:#CCC3F8;
 }
 
-.nav{
-	order:1;
+.navContent{
 	min-height:100vh;
+	margin-top:78px;
+	padding-top: 20px;
 	width:200px;
 	background-color:#B7F6FF;
 }
@@ -14,8 +15,19 @@ body{
 	list-style: none;
 }
 
-.navLinks__item{
+.navigation{
+	margin-bottom:10px;
+}
+
+.navLinks__addTask{
+	text-decoration:none;
+	font-family:Arial;
+	font-size:18px;
+}
+.navLinks__link{
 	text-decoration: none;
+	font-family:Arial;
+	font-size:18px;
 }
 
 .familyName{
