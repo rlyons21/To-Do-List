@@ -98,13 +98,24 @@ class Task
 
 
 
+<<<<<<< HEAD
 	def Task.deleteTask("i|Bob|Nail the picture on the wall|90639210")
 		
+=======
+	def Task.deleteTask(num,filename)
+		n = num.to_i 
+		t = Task.searchForName(filename)
+		t.delete_at(n)
+		i=0
+>>>>>>> 6c910efd570fa11cbb1b8dbcb134d4219e0167ee
 		File.delete("tasks.txt")
-		File.open("tasks.txt", "a")
-
-		
-		end
+		File.open("tasks.txt", "a") { |f|
+			while i < t.length
+				f.puts t[i].join("|")
+				i += 1
+			end
+		}
+	end
 	
 
 

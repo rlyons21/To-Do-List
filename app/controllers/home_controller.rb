@@ -50,6 +50,6 @@ MyApp.get "/edit" do
 end
 
 MyApp.post '/delete' do
-	Task.deleteTask()
+	Task.deleteTask(params[:num],"tasks.txt")
 	redirect '/'
 	end

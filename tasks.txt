@@ -14,8 +14,6 @@ i|Joe|Do the dishes|48344448
 i|Bob|Scoop the cat litter|48344447
 i|Mary|Go to the store|19179746
 i|Bob|Nail the picture on the wall|90639210
-
 i|Lisa|clean the car|15674532
 i|Joe|walk the dog|58228922
 c|Lisa|walk the hamster|62948448
-c|Joe|feed the chickens|39428237
