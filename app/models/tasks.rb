@@ -121,8 +121,6 @@ class Task
 			end
 		}
 	end
-	
-
 
 
 # This is the end for the class	

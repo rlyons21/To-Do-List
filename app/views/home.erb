@@ -20,6 +20,7 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 <% @incompleteTasks.each do |element| %>
 	<ul class = "taskList">
 		<div class="task">
+
 			<li class = "taskList__task"><%= element[2] %></li>
 			<form method="post" action="/delete"> 
 				<input type="hidden" name="num" value ="<%= element[3]%>">
