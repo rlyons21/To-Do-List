@@ -1,6 +1,3 @@
-c|Mary|Vacuum the living room carpet|19174546
-i|Lisa|Wash the bathtub|18174536
-i|Joe|Do the dishes|98174836
 i|Bob|Scoop the cat litter|98174236
 i|Bob|Mop the mud room floor|38374236
 i|Bob|Clean the fish bowl|28374416
@@ -17,3 +14,4 @@ i|Bob|Nail the picture on the wall|90639210
 i|Lisa|clean the car|15674532
 i|Joe|walk the dog|58228922
 c|Lisa|walk the hamster|62948448
+i|Bob|trim the hedges|61469762
