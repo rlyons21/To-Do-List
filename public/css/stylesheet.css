@@ -13,7 +13,6 @@ body{
 	float:left;
 	min-height:100vh;
 	width:200px;
-	margin-top:78px;
 	padding-top: 20px;
 	background-color:#B7F6FF;
 }
@@ -50,7 +49,7 @@ body{
 	width:100%;
 	position:absolute;
 	top:0;
-	background-color: yellow;
+	background-color: #ACFF9C;
 	font-family:Cursive;
 	color: #203719;
 }
@@ -60,12 +59,19 @@ body{
 
 .mainContent{
 	width:80%;
-	margin-left:250px;
+	margin-left:225px;
 	margin-top:78px;
 }
 
-.taskList{
+.listTitle{
+	text-decoration: underline;
+}
 
+.task{
+	display:flex;
+}
+.taskList{
+	list-style: none;
 }
 
 .taskList__item{

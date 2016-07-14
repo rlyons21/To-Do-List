@@ -1,15 +1,15 @@
-
-<div class="navContent">
-	<ul class=navLinks>
-		<li class="navigation"><a class="navLinks__addTask" href="/new">ADD A TASK</a></li>
-		<li class="navigation"><a class="navLinks__link" href="/">All Tasks</a></li>
-		<li class="navigation"><a class="navLinks__link" href="/filtered?user=Bob">Bob</a></li>
-		<li class="navigation"><a class="navLinks__link" href="/filtered?user=Mary">Mary</a></li>
-		<li class="navigation"><a class="navLinks__link" href="/filtered?user=Joe">Joe</a></li>
-		<li class="navigation"><a class="navLinks__link" href="/filtered?user=Lisa">Lisa</a></li>
-	</ul>
+<div class="left">
+	<div class="navContent">
+		<ul class=navLinks>
+			<li class="navigation"><a class="navLinks__addTask" href="/new">ADD A TASK</a></li>
+			<li class="navigation"><a class="navLinks__link" href="/">All Tasks</a></li>
+			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Bob">Bob</a></li>
+			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Mary">Mary</a></li>
+			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Joe">Joe</a></li>
+			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Lisa">Lisa</a></li>
+		</ul>
+	</div>
 </div>
-
 
 <div class="mainContent">
 	<h1> X's Tasks</h1>
@@ -23,11 +23,13 @@
 	<h3 class="listTitle"> To Do </h3>
 	<% if !@theseAreNotDone.nil? %>
 		<% @theseAreNotDone.each do |element| %>
-			<p><%= element %></p>
-			<form method="post" action="/delete"> 
-				<input type="hidden" name="num" value ="0">
-				<input type="submit" value="Delete">
-			</form>
+			<div class="task">
+				<p><%= element %></p>
+				<form method="post" action="/delete"> 
+					<input type="hidden" name="num" value ="0">
+					<input type="submit" value="Delete">
+				</form>
+			</div>
 		<% end %>
 	<% else %>
 		<p> There are no tasks </p>
@@ -36,11 +38,13 @@
 	<h3 class="listTitle"> Completed Tasks </h3>
 	<% if @theseAreDone != nil %>
 		<% @theseAreDone.each do |element| %>
-			<p><%= element %></p>
-			<form method="post" action="/delete"> 
-				<input type="hidden" name="num" value ="0">
-				<input type="submit" value="Delete">
-			</form>
+			<div class="task">
+				<p><%= element %></p>
+				<form method="post" action="/delete"> 
+					<input type="hidden" name="num" value ="0">
+					<input type="submit" value="Delete">
+				</form>
+			</div>
 		<% end %>
 	<% else %>
 		<p> There are no tasks </p>

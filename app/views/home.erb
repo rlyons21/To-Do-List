@@ -16,27 +16,33 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
  -->
  <div class="mainContent">
 
-<h1 class="ListTitle">To Do List</h1>
+<h1 class="listTitle">To Do List</h1>
 <% @incompleteTasks.each do |element| %>
-	<ul class = "TaskList">
-		<li class = "TaskList__task"><%= element %></li>
-		<form method="post" action="/delete"> 
-			<input type="hidden" name="num" value ="2">
-			<input type="submit" value="Delete">
-		</form>
+	<ul class = "taskList">
+		<div class="task">
+			<li class = "taskList__task"><%= element %></li>
+			<form method="post" action="/delete"> 
+				<input type="hidden" name="num" value ="2">
+				<input type="submit" value="Delete">
+			</form>
+		</div>
 	</ul>
 	
 	<form method="post" action="/"> 
-		<textarea class= "TaskList__item"> <%= element %> </textarea>
+		<textarea class= "taskList__item"> <%= element %></textarea>
 		<input type="hidden" name="num" value="2">
 		<input type="submit" value="Delete">
 	</form>
 <% end %>
 
-<h1 class="ListTitle">Completed Tasks</h1>
+<h1 class="listTitle">Completed Tasks</h1>
 <% @completedTasks.each do |element| %>
-	<ul class="TaskList">
-		<li class="TaskList__task"><%= element %></li>
+	<ul class="taskList">
+		<li class="taskList__task"><%= element %></li>
+		<form method="post" action="/delete"> 
+			<input type="hidden" name="num" value ="2">
+			<input type="submit" value="Delete">
+		</form>
 	</ul>
 <% end %>
 
