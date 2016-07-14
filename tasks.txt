@@ -1,6 +1,3 @@
-c|Bob|Clean kitchen
-
-
 c|Mary|Vacuum the living room carpet
 i|Lisa|Wash the bathtub
 i|Joe|Do the dishes
@@ -24,6 +21,6 @@ i|Joe|Wash the dog
 i|Lisa|feed the kittens
 c|Linda|Vacuum the living room carpet
 i|Tina|Wash the bathtub
-i|Gene|Do the dishes
-
-i|Mary|Fluff the pillows
+i|Gene|Do the dishesi|Lisa|dining room
+i|Bob|clean the mirror
+i|Mary|fly the kite

@@ -100,7 +100,7 @@ class Task
 
 
 
-	def Task.deleteTask(num)
+	def Task.deleteTask()
 		n = num.to_i 
 		t = Task.searchForName
 		t.delete_at(n)

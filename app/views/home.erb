@@ -17,9 +17,10 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 
 <h1 class="TaskList">To Do List</h1>
 <% @incompleteTasks.each do |element| %>
-	<p class = "TaskList__item"><%= element %></p>
-	<form method="post" action="/delete"> 
-		<input type="hidden" name="num" value ="2">
+	
+	<form method="post" action="/"> 
+		<textarea class= "TaskList__item"> <%= element %> </textarea>
+		<input type="hidden" name="num" value="2">
 		<input type="submit" value="Delete">
 	</form>
 <% end %>
