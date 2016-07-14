@@ -2,7 +2,7 @@
 
 <a href="/new">ADD A TASK</a>
 
-<div class="Nav">
+<div class="nav">
 	<ul class=navLinks>
 		<li><a class="navLinks__item" href="/filtered?user=Bob">Bob</a></li>
 		<li><a class="navLinks__item" href="/filtered?user=Mary">Mary</a></li>
@@ -14,18 +14,25 @@
 <!-- 
 TODO - Reconsider BEM structure below. Each task should be a <li>.
  -->
+ <div class="mainContent">
 
-<h1 class="TaskList">To Do List</h1>
+<h1 class="ListTitle">To Do List</h1>
 <% @incompleteTasks.each do |element| %>
-	<p class = "TaskList__item"><%= element %></p>
-	<form method="post" action="/delete"> 
-		<input type="hidden" name="num" value ="2">
-		<input type="submit" value="Delete">
-	</form>
+	<ul class = "TaskList">
+		<li class = "TaskList__item"><%= element %></li>
+		<form method="post" action="/delete"> 
+			<input type="hidden" name="num" value ="2">
+			<input type="submit" value="Delete">
+		</form>
+	</ul>
 <% end %>
 
-<h1 class="TaskList">Completed Tasks</h1>
+<h1 class="ListTitle">Completed Tasks</h1>
 <% @completedTasks.each do |element| %>
-	<p class="TaskList__item"><%= element %></p>
+	<ul>
+		<li class="TaskList__item"><%= element %></li>
+	</ul>
 <% end %>
+
+</div>
 

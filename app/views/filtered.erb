@@ -1,33 +1,35 @@
-<h1> X's Tasks</h1>
+<div class="mainContent">
+	<h1> X's Tasks</h1>
 
-<!-- 
-TODO - In Ruby, it's better to call the `.nil?` function
-than to use `==` to see if something is `nil`. One example
-below, then you do the other one yourself.
- -->
+	<!-- 
+	TODO - In Ruby, it's better to call the `.nil?` function
+	than to use `==` to see if something is `nil`. One example
+	below, then you do the other one yourself.
+	 -->
 
-<h3> To Do </h3>
-<% if !@theseAreNotDone.nil? %>
-	<% @theseAreNotDone.each do |element| %>
-		<p><%= element %></p>
-		<form method="post" action="/delete"> 
-			<input type="hidden" name="num" value ="0">
-			<input type="submit" value="Delete">
-		</form>
+	<h3> To Do </h3>
+	<% if !@theseAreNotDone.nil? %>
+		<% @theseAreNotDone.each do |element| %>
+			<p><%= element %></p>
+			<form method="post" action="/delete"> 
+				<input type="hidden" name="num" value ="0">
+				<input type="submit" value="Delete">
+			</form>
+		<% end %>
+	<% else %>
+		<p> There are no tasks </p>
 	<% end %>
-<% else %>
-	<p> There are no tasks </p>
-<% end %>
 
-<h3> Completed Tasks </h3>
-<% if @theseAreDone != nil %>
-	<% @theseAreDone.each do |element| %>
-		<p><%= element %></p>
-		<form method="post" action="/delete"> 
-			<input type="hidden" name="num" value ="0">
-			<input type="submit" value="Delete">
-		</form>
+	<h3> Completed Tasks </h3>
+	<% if @theseAreDone != nil %>
+		<% @theseAreDone.each do |element| %>
+			<p><%= element %></p>
+			<form method="post" action="/delete"> 
+				<input type="hidden" name="num" value ="0">
+				<input type="submit" value="Delete">
+			</form>
+		<% end %>
+	<% else %>
+		<p> There are no tasks </p>
 	<% end %>
-<% else %>
-	<p> There are no tasks </p>
-<% end %>
+</div>

@@ -1,8 +1,15 @@
 body{
 	margin:0;
+	padding:0;
 	background-color:#CCC3F8;
 }
 
+.nav{
+	order:1;
+	min-height:100vh;
+	width:200px;
+	background-color:#B7F6FF;
+}
 .navLinks{
 	list-style: none;
 }
@@ -12,10 +19,20 @@ body{
 }
 
 .familyName{
+	height:78px;
+	width:100%;
+	position:absolute;
+	top:0;
+	background-color: yellow;
+	padding-left:25px;
 	font-family:Cursive;
 	color: #203719;
 }
 
+.mainContent{
+	order:2;
+	display: inline;
+}
 .taskList{
 
 }
