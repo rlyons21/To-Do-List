@@ -47,5 +47,15 @@ class TaskTest < Minitest::Test
     end
     #After this test runs, make sure the tasks_text_delete.txt contains the same array info as tasks_test.txt
 
+    def test_edit_a_task_add_new_function_part
+        results = Task.editExistingTask("#{MyApp.settings.root}/tests/unit/tasks_test.txt", "i", "Bob", "Run the Roomba", "28373316")
+        assert_equal(nil, results)
+    end
+
+    def test_create_a_new_task
+        results = Task.createNewTask("#{MyApp.settings.root}/tests/unit/tasks_test_add_new.txt", "Bob", "Sweep up Grandpa's ashes", "12373514")
+        assert_equal(nil, results)
+    end
+    #After this test runs, make sure that task_test_add_new.txt and tasks_test.txt is returned to its original state.
 
 end
