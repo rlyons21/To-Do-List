@@ -22,3 +22,4 @@ i|Lisa|hoist the jib|13278566
 i|Mary|rake the leaves|82831297
 c|Mary|read the news|35810288
 c|Mary|find me|42718274
+i|Lisa|brush the dog|43713255
