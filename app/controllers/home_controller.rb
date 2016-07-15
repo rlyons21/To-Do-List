@@ -45,7 +45,8 @@ end
 
 
 
-MyApp.get "/edit" do
+MyApp.post "/edit" do
+	Task.editTask(params[:num], "tasks.txt")
 	erb :"edit"
 end
 
