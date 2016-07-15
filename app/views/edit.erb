@@ -5,7 +5,7 @@
 <form method="post" action="/edit/process" >
 		
 		<div>
-			<input type="text" name="task" value="<%= @task %>">
+			<input class="enterTask" type="text" name="task" value="<%= @task %>">
 		</div>
 		
 		<div>
@@ -61,7 +61,7 @@
 
 		<input type="hidden" name="num" value="<%= params[:num] %>">
 
-		<button  class="editNamesList" type="submit" value="Submit">Submit</button>
+		<button  class="editaddSubmitButton" type="submit" value="Submit">Submit</button>
   		
 </form>
 </div>

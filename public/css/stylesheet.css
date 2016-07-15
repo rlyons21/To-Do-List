@@ -160,3 +160,23 @@ body{
 	margin-top:10px;
 	font:Arial;
 }
+
+.editaddSubmitButton{
+	background-color:#FDFFAA;
+	color:black;
+	height:25px;
+	width:75px;
+	border-radius:6px;
+	margin-top:5px;
+	font-family:Arial;
+	font-size:14px;
+}
+
+.enterTask{
+	margin-top:30px;
+	height:25px;
+	width:200px;
+	font-size:14px;
+	background-color:#E3DDFF;
+
+}
