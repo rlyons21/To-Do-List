@@ -1,23 +1,22 @@
 c|Joe|Make beds|68364456
 c|Joe|Do the dishes|48344448
-i|Bob|Scoop the cat litter|48344447
 i|Bob|Nail the picture on the wall|90639210
-i|Lisa|clean the car|15674532
-i|Joe|walk the dog|58228922
-c|Lisa|walk the hamster|62948448
 i|Joe|Make beds|68364456
 c|Bob|Mop the basement|68364457
-c|Mary|feed the fish|48450908
 c|Joe|Filter the water|42053245
 c|Joe|Sweep the walk|2570206
-i|Lisa|hoist the jib|13278566
-i|Mary|rake the leaves|82831297
-c|Mary|read the news|35810288
-c|Mary|find me|42718274
 i|Mary|Run the dryer|24252905
-i|Bob|Dust the book shelves|53597052
 i|Bob|Walk the hamster |1243145
 c|Mary|Mop the basement|52679669
 c|Lisa|Vacuum the rug|34587544
-c|Joe|Trim the front hedges.|98370739
 i|Bob|Change the AC filter|88008004
+i|Bob|Dust the book shelves|68249195
+i|Bob|Scoop the cat litter|11471922
+i|Joe|Walk the dog|1158338
+i|Lisa|Clean the car|97845989
+i|Mary|Rake the leaves|95182081
+c|Mary|Feed the fish|3234981
+c|Lisa|Walk the hamster|89166161
+c|Mary|Read the news|26207105
+c|Joe|Trim the front hedges|68788894
+i|Lisa|Hoist the jib|82926181

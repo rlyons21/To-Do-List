@@ -9,51 +9,51 @@
 		</div>
 		
 		<div>
-			<p>Family Member</p>
+			<p class="editFamilyHeader">Family Member</p>
 		</div>
 		<div>
 			<div>
 			  <label>
-			   <input type="radio" name="person" value="Bob" <%= "checked" if @person == "Bob" %>>
+			   <input class="editNamesList" type="radio" name="person" value="Bob" <%= "checked" if @person == "Bob" %>>
 			    Bob
 			  </label>
 			</div>
 
 			<div>
 			  <label>
-			    <input type="radio" name="person" value="Mary" <%= "checked" if @person == "Mary" %>>
+			    <input class="editNamesList" type="radio" name="person" value="Mary" <%= "checked" if @person == "Mary" %>>
 			    Mary
 			  </label>
 			</div>
 
 			<div>
 			  <label>
-			    <input type="radio" name="person" value="Joe" <%= "checked" if @person == "Joe" %>>
+			    <input class="editNamesList" type="radio" name="person" value="Joe" <%= "checked" if @person == "Joe" %>>
 			    Joe
 			  </label>
 			</div>
 
 			<div>
 			  <label>
-			    <input type="radio" name="person" value="Lisa" <%= "checked" if @person == "Lisa" %>>
+			    <input class="editNamesList" type="radio" name="person" value="Lisa" <%= "checked" if @person == "Lisa" %>>
 			    Lisa
 			  </label>
 			</div>
 		</div>
 		<div>
-			<p>Status</p>
+			<p class="editFamilyHeader">Status</p>
 		</div>
 		<div>
 			<div>
 			  <label>
-			    <input type="radio" name="status" value="i" <%= "checked" if @status == "i" %>>
+			    <input class="editNamesList" type="radio" name="status" value="i" <%= "checked" if @status == "i" %>>
 			    Incomplete
 			  </label>
 			</div>
 
 			<div>
 			  <label>
-			    <input type="radio" name="status" value="c" <%= "checked" if @status == "c" %>>
+			    <input class="editNamesList" type="radio" name="status" value="c" <%= "checked" if @status == "c" %>>
 			    Complete
 			  </label>
 			</div>
@@ -61,7 +61,7 @@
 
 		<input type="hidden" name="num" value="<%= params[:num] %>">
 
-		<button type="submit" value="Submit">Submit</button>
+		<button  class="editNamesList" type="submit" value="Submit">Submit</button>
   		
 </form>
 </div>
