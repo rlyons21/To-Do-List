@@ -7,7 +7,6 @@ i|Lisa|clean the car|15674532
 i|Joe|walk the dog|58228922
 c|Lisa|walk the hamster|62948448
 i|Joe|Make beds|68364456
-c|Bob|Mop the basement|68364457
 i|Joe|water the garden|70063973
 c|Bob|Mop the basement|68364457
 c|Mary|feed the fish|48450908
@@ -15,3 +14,5 @@ c|Joe|Filter the water|42053245
 c|Joe|Sweep the walk|2570206
 i|Lisa|hoist the jib|13278566
 i|Mary|rake the leaves|82831297
+i|Bob|Walk the hamster |1243145
+c|Mary|Mop the basement|52679669

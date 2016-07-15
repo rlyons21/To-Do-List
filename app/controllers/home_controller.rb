@@ -29,12 +29,9 @@ end
 
 
 MyApp.post "/edit" do
-	# TODO - Define '@task' as a Hash containing the actual task's info.
-	# Get the actual task based on params[:num].
 	@task = params[:task]
 	@person = params[:person]
 	@status = params[:status]
-	# @task = {"description" => "Edit Task"}
 
 	Task.editTask(params[:num], "tasks.txt")
 	erb :"edit"
