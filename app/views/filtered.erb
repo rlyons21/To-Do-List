@@ -15,31 +15,29 @@
 </div>
 
 <div class="mainContent">
-	<!-- TODO - Change 'X' to a real name. -->
-	<h1> X's Tasks</h1>
+	
+	<h1> <%= @member %>'s Tasks</h1>
 
-	<h3 class="listTitle"> To Do </h3>
+	<h3 class="toDoTitle"> To Do </h3>
 
 	<% if !@theseAreNotDone.nil? %>
 		<% @theseAreNotDone.each do |element| %>
 			<ul class="taskList">
 				<div class="task">
 
-					<li class = "taskList__task"><%= element[2] %></li>
-
-					<!-- TODO - Everything in a UL should be in a LI. No orphan forms like below. -->
 					<form method="post" action="/delete"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input type="submit" value="Delete">
+						<input class="deleteButton" type="submit" value="Delete">
 					</form>
 
 					<form method="post" action="/edit"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input type="submit" value="Edit">
+						<input class="editButton" type="submit" value="Edit">
 						<input type="hidden" name="status" value ="<%= element[0]%>">
 						<input type="hidden" name="task" value ="<%= element[2]%>">
 						<input type="hidden" name="person" value ="<%= element[1]%>">
 					</form>
+					<li class = "taskList__task"><%= element[2] %></li>
 				</div>
 			</ul>
 		<% end %>
@@ -47,30 +45,29 @@
 		<p> There are no tasks! </p>
 	<% end %>
 
-	<h3 class="listTitle"> Completed Tasks </h3>
+	<h3 class="completeTitle"> Completed Tasks </h3>
 	<% if !@theseAreDone.nil? %>
 		<% @theseAreDone.each do |element| %>
-
-		<!-- TODO - Same indentation and HTML structure improvements as above. -->
 		
 		<ul class ="taskList">	
 			<div class="task">
-			<li class = "taskList__task"><%= element[2] %></li>
-			<form method="post" action="/delete"> 
-				<input type="hidden" name="num" value ="<%= element[3]%>">
-				<input type="submit" value="Delete">
-			</form>
-			<form method="post" action="/edit"> 
-				<input type="hidden" name="num" value ="<%= element[3]%>">
-				<input type="submit" value="Edit">
-				<input type="hidden" name="status" value ="<%= element[0]%>">
-				<input type="hidden" name="task" value ="<%= element[2]%>">
-				<input type="hidden" name="person" value ="<%= element[1]%>">
-			</form>
-		
-			</div>
-		</ul>
+				
+				<form method="post" action="/delete"> 
+					<input type="hidden" name="num" value ="<%= element[3]%>">
+					<input class="deleteButton" type="submit" value="Delete">
+				</form>
+				
+				<form method="post" action="/edit"> 
+					<input type="hidden" name="num" value ="<%= element[3]%>">
+					<input class="editButton" type="submit" value="Edit">
+					<input type="hidden" name="status" value ="<%= element[0]%>">
+					<input type="hidden" name="task" value ="<%= element[2]%>">
+					<input type="hidden" name="person" value ="<%= element[1]%>">
+				</form>
 
+					<li class = "taskList__task"><%= element[2] %></li>
+				</div>
+			</ul>
 		<% end %>
 	<% else %>
 		<p> There are no tasks! </p>

@@ -1,4 +1,3 @@
-i|Bob|Change the AC filter|28354455
 c|Joe|Make beds|68364456
 c|Joe|Do the dishes|48344448
 i|Bob|Scoop the cat litter|48344447
@@ -21,3 +20,4 @@ i|Bob|Walk the hamster |1243145
 c|Mary|Mop the basement|52679669
 c|Lisa|Vacuum the rug|34587544
 c|Joe|Trim the front hedges.|98370739
+i|Bob|Change the AC filter|88008004
