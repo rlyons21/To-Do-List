@@ -143,3 +143,13 @@ body{
 	margin-top:10px;
 	font:Arial;
 }
+
+.addFamilyHeader {
+	font-size: 150%;
+	font:Arial;
+	margin-top:10px;
+}
+.addNamesList {
+	margin-top:10px;
+	font:Arial;
+}
