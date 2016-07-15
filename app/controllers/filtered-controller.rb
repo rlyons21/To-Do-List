@@ -1,6 +1,6 @@
 MyApp.get "/filtered" do
-	@theseAreNotDone = Task.familyMemberToDos("tasks.txt", params[:user])
-	@theseAreDone = Task.familyMemberDone("tasks.txt", params[:user])
+	@theseAreNotDone = Task.familyMemberIncompleteTasks("tasks.txt", params[:user])
+	@theseAreDone = Task.familyMemberCompletedTasks("tasks.txt", params[:user])
 
 	erb :"filtered"
 end
