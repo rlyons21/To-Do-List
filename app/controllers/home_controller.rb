@@ -27,6 +27,14 @@ MyApp.post "/new/process" do
 end
 
 
+
+MyApp.post "/edit" do
+	Task.deleteTask(params[:num],"tasks.txt")
+	Task.editTask(params[:num], "tasks.txt")
+	erb :"edit"
+end
+
+
 MyApp.post "/edit/process" do
 	@edit_status = params[:status]
 	@edit_task = params[:task]
@@ -44,10 +52,6 @@ MyApp.post "/edit/process" do
 end
 
 
-
-MyApp.get "/edit" do
-	erb :"edit"
-end
 
 MyApp.post '/delete' do
 	Task.deleteTask(params[:num],"tasks.txt")

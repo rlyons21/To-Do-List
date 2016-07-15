@@ -1,4 +1,3 @@
-
 i|Joe|water the garden|70063973
 i|Bob|Clean the fish bowl|28374416
 i|Bob|Change the AC filter|28354455
@@ -15,9 +14,11 @@ c|Lisa|walk the hamster|62948448
 i|Joe|Make beds|68364456
 c|Bob|Mop the basement|68364457
 i|Joe|water the garden|70063973
-<<<<<<< HEAD
+c|Bob|Mop the basement|68364457
 c|Mary|feed the fish|48450908
-=======
-i|Lisa|clean your room|84477141
->>>>>>> 1ebbd6cd7df6ee650c5d3121119288085e99216c
-c|Lisa|dust the living room|83810105
+c|Joe|Filter the water|42053245
+c|Joe|Sweep the walk|2570206
+i|Lisa|hoist the jib|13278566
+i|Mary|rake the leaves|82831297
+|Mary|read the news|35810288
+|Mary|find me|42718274
