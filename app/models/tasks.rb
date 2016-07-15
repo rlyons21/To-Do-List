@@ -72,7 +72,7 @@ class Task
 	def Task.done(filename)
 		completedFamilyTasks = Array.new
 		Task.completedTasks(filename).each do |element|
-			completedFamilyTasks << element[2]
+			completedFamilyTasks << element
 		end
 		return completedFamilyTasks
 	end
@@ -97,21 +97,22 @@ class Task
 
 
 
-	def Task.findTask(filename, num)
-		count=0
-		file= File.open(filename,"r"){ |f| f.each_line {|line|
-			count += 1
-			return count if line =~ /#{num}/
-			}}
-		
+	def Task.findTask(num, arr)
+		numIndex = 0
+		arr.each do |element|
+			if element[3].to_i == num.to_i
+				return numIndex
+			else
+				numIndex += 1
+			end
+		end
 		
 	end
 
-	def Task.deleteTask(num,filename)
-		num_index = Task.findTask(filename,num)
-		n = num_index.to_i 
+	def Task.deleteTask(num, filename)
 		t = Task.searchForName(filename)
-		t.delete_at(n)
+		ind = Task.findTask(num, t)
+		t.delete_at(ind)
 		i=0
 		File.delete("tasks.txt")
 		File.open("tasks.txt", "a") { |f|
