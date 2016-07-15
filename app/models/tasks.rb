@@ -54,9 +54,9 @@ class Task
 
 	#This Task is about processing a new task
 
-	def Task.createNewTask(filename)
+	def Task.createNewTask(filename, name, task, number)
 		somefile = File.open(filename, "a")
-		somefile.puts "i|#{@new_person}|#{@new_task}|#{@randomnumber}"
+		somefile.puts "i|#{name}|#{task}|#{number}"
 		somefile.close
 	end
 

@@ -12,18 +12,9 @@ end
 
 
 MyApp.post "/new/process" do
-	@new_task = params[:task]
-	@new_person = params[:person]
-	@randomnumber = rand(99999999)
 
-	# TODO - Move the complexity about adding things to a 
-	# file into a separate function that's defined in
-	# a model.
-
-	somefile = File.open("tasks.txt", "a")
-	somefile.puts "i|#{@new_person}|#{@new_task}|#{@randomnumber}"
-	somefile.close
-  redirect '/'
+	@newtask = Task.createNewTask("tasks.txt", params[:person], params[:task], rand(99999999))
+	redirect '/'
 end
 
 
