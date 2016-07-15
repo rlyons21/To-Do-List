@@ -14,12 +14,6 @@
 <div class="mainContent">
 	<h1> X's Tasks</h1>
 
-	<!-- 
-	TODO - In Ruby, it's better to call the `.nil?` function
-	than to use `==` to see if something is `nil`. One example
-	below, then you do the other one yourself.
-	 -->
-
 	<h3 class="listTitle"> To Do </h3>
 	<% if !@theseAreNotDone.nil? %>
 		<% @theseAreNotDone.each do |element| %>
@@ -33,11 +27,11 @@
 		</div>
 		<% end %>
 	<% else %>
-		<p> There are no tasks </p>
+		<p> There are no tasks! </p>
 	<% end %>
 
 	<h3 class="listTitle"> Completed Tasks </h3>
-	<% if @theseAreDone != nil %>
+	<% if !@theseAreDone.nil? %>
 		<% @theseAreDone.each do |element| %>
 			<div class="task">
 
@@ -49,6 +43,6 @@
 		</div>
 		<% end %>
 	<% else %>
-		<p> There are no tasks </p>
+		<p> There are no tasks! </p>
 	<% end %>
 </div>

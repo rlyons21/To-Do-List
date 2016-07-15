@@ -25,5 +25,4 @@ c|Bob|Mop the basement|68364457
 i|Mary|Vacuum the living room carpet|68364459
 i|Joe|water the garden|70063973
 c|Mary|feed the fish|48450908
-i|Lisa|clean your room|84477141
 c|Lisa|dust the living room|83810105

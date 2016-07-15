@@ -8,7 +8,7 @@ class Task
 			l = line.split("|")
 			separatedTasks << l
 		end
-		separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp }
+		# separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp]}
 		return separatedTasks
 	end
 # For each family member that will be called with (name) the following functions split up the tasks into complete and incomplete and will print out those tasks.
@@ -42,22 +42,6 @@ class Task
 		return familyMemberIncomplete
 	end	
 
-	def Task.familyMemberToDos(filename, name)
-		tasksToBeDone = Array.new
-		Task.familyMemberIncompleteTasks(filename, name).each do |element|
-			tasksToBeDone << element
-		end
-		return tasksToBeDone
-	end
-
-	def Task.familyMemberDone(filename, name)
-		tasksDone = Array.new
-		Task.familyMemberCompletedTasks(filename, name).each do |element|
-			tasksDone << element
-		end
-		return tasksDone
-	end
-	
 #This section is for sorting Tasks by complete and incomplete, and then functions for separating them for printing
 	def Task.completedTasks(filename)
 		completed = Array.new
@@ -69,14 +53,6 @@ class Task
 		return completed
 	end
 
-	def Task.done(filename)
-		completedFamilyTasks = Array.new
-		Task.completedTasks(filename).each do |element|
-			completedFamilyTasks << element
-		end
-		return completedFamilyTasks
-	end
-
 	def Task.incompleteTasks(filename)
 		incompleteTasks = Array.new
 		Task.searchForName(filename).each do |element|
@@ -86,15 +62,6 @@ class Task
 		end
 		return incompleteTasks
 	end
-
-	def Task.notDone(filename)
-		notDoneFamilyTasks = Array.new
-		Task.incompleteTasks(filename).each do |element|
-			notDoneFamilyTasks << element
-		end
-		return notDoneFamilyTasks
-	end
-
 
 
 	def Task.findTask(num, arr)
