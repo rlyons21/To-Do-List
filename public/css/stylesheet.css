@@ -141,3 +141,22 @@ body{
 	color:black;
 	border:2px solid #73f6b6;
 }
+.editFamilyHeader {
+	font-size: 150%;
+	font:Arial;
+	margin-top:10px;
+}
+.editNamesList {
+	margin-top:10px;
+	font:Arial;
+}
+
+.addFamilyHeader {
+	font-size: 150%;
+	font:Arial;
+	margin-top:10px;
+}
+.addNamesList {
+	margin-top:10px;
+	font:Arial;
+}
