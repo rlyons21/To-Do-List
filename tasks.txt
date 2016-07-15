@@ -15,4 +15,3 @@ c|Joe|Filter the water|42053245
 c|Joe|Sweep the walk|2570206
 i|Lisa|hoist the jib|13278566
 i|Mary|rake the leaves|82831297
-i|Mary|Clean the fish bowl|95450498
