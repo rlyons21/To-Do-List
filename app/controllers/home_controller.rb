@@ -29,13 +29,18 @@ end
 
 
 MyApp.post "/edit" do
-	Task.deleteTask(params[:num],"tasks.txt")
+	# TODO - Define '@task' as a Hash containing the actual task's info.
+	# Get the actual task based on params[:num].
+	@task = {"description" => "Banana"}
+
 	Task.editTask(params[:num], "tasks.txt")
 	erb :"edit"
 end
 
 
 MyApp.post "/edit/process" do
+	Task.deleteTask(params[:num],"tasks.txt")
+
 	@edit_status = params[:status]
 	@edit_task = params[:task]
 	@edit_person = params[:person]
