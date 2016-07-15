@@ -29,12 +29,12 @@
 
 					<form method="post" action="/delete"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input type="submit" value="Delete">
+						<input class="deleteButton" type="submit" value="Delete">
 					</form>
 
 					<form method="post" action="/edit"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input type="submit" value="Edit">
+						<input class="editButton" type="submit" value="Edit">
 					</form>
 					</li>
 				</div>
@@ -53,12 +53,12 @@
 					<li class = "taskList__task"><%= element[2] %></li>
 					<form method="post" action="/delete"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input type="submit" value="Delete">
+						<input class="deleteButton" type="submit" value="Delete">
 					</form>
 					
 					<form method="post" action="/edit"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input type="submit" value="Edit">
+						<input class="editButton" type="submit" value="Edit">
 					</form>
 				</div>
 			</ul>
