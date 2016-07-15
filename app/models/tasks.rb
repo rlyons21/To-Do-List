@@ -126,6 +126,15 @@ class Task
 	def Task.editTask(num, filename)
 		t= Task.searchForName(filename)
 		ind = Task.findTask(num, t)
+		t.delete_at(ind)
+		i=0
+		File.delete("tasks.txt")
+		File.open("tasks.txt", "a") { |f|
+			while i < t.length
+				f.puts t[i].join("|")
+				i += 1
+			end
+		}
 	end
 
 
