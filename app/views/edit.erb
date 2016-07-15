@@ -5,36 +5,37 @@
 <form method="post" action="/edit/process" >
 		
 		<div>
-			<input type="text" name="task" value="<%= @task["description"] %>">
+			<input type="text" name="task" value="<%= @task %>">
 		</div>
+		
 		<div>
 			<p>Family Member</p>
 		</div>
 		<div>
 			<div>
 			  <label>
-			   <input type="radio" name="person" value="Bob" <%= "selected" if @task["assignee"] == "Bob" %>>
+			   <input type="radio" name="person" value="Bob" <%= "checked" if @person == "Bob" %>>
 			    Bob
 			  </label>
 			</div>
 
 			<div>
 			  <label>
-			    <input type="radio" name="person" value="Mary" <%= "selected" if @task["assignee"] == "Mary" %>>
+			    <input type="radio" name="person" value="Mary" <%= "checked" if @person == "Mary" %>>
 			    Mary
 			  </label>
 			</div>
 
 			<div>
 			  <label>
-			    <input type="radio" name="person" value="Joe" <%= "selected" if @task["assignee"] == "Joe" %>>
+			    <input type="radio" name="person" value="Joe" <%= "checked" if @person == "Joe" %>>
 			    Joe
 			  </label>
 			</div>
 
 			<div>
 			  <label>
-			    <input type="radio" name="person" value="Lisa" <%= "selected" if @task["assignee"] == "Lisa" %>>
+			    <input type="radio" name="person" value="Lisa" <%= "checked" if @person == "Lisa" %>>
 			    Lisa
 			  </label>
 			</div>
@@ -45,14 +46,14 @@
 		<div>
 			<div>
 			  <label>
-			    <input type="radio" name="status" value="i">
+			    <input type="radio" name="status" value="i" <%= "checked" if @status == "i" %>>>
 			    Incomplete
 			  </label>
 			</div>
 
 			<div>
 			  <label>
-			    <input type="radio" name="status" value="c">
+			    <input type="radio" name="status" value="c" <%= "checked" if @status == "c" %>>>
 			    Complete
 			  </label>
 			</div>
