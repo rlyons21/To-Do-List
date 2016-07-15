@@ -11,7 +11,7 @@ class Task
 		# separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp]}
 		return separatedTasks
 	end
-# For each family member that will be called with (name) the following functions split up the tasks into complete and incomplete and will print out those tasks.
+#This funciton sorts the unfiltered list by family member
 	def Task.searchForFamilyMember(filename, name)
 		familyMemberTasks = Array.new
 		Task.searchForName(filename).each do |element|
@@ -21,7 +21,7 @@ class Task
 		end
 		return familyMemberTasks
 	end
-
+#The below two functions sort the filtered-by-family list by incomplete and complete
 	def Task.familyMemberCompletedTasks(filename, name)
 		familyMemberComplete = Array.new
 		Task.searchForFamilyMember(filename, name).each do |element|
@@ -42,7 +42,8 @@ class Task
 		return familyMemberIncomplete
 	end	
 
-#This section is for sorting Tasks by complete and incomplete, and then functions for separating them for printing
+#This section is a way to sort the overall, unfiltered list by completed and incomplete tasks!
+
 	def Task.completedTasks(filename)
 		completed = Array.new
 		Task.searchForName(filename).each do |element|
@@ -63,13 +64,6 @@ class Task
 		return incompleteTasks
 	end
 
-	def Task.notDone(filename)
-		notDoneFamilyTasks = Array.new
-		Task.incompleteTasks(filename).each do |element|
-			notDoneFamilyTasks << element
-		end
-		return notDoneFamilyTasks
-	end
 
 # Finds the index of the nested array that contains num
 
@@ -103,8 +97,8 @@ class Task
 		ind = Task.findTask(num, t)
 		t.delete_at(ind)
 		i=0
-		File.delete("tasks.txt")
-		File.open("tasks.txt", "a") { |f|
+		File.delete(filename)
+		File.open(filename, "a") { |f|
 			while i < t.length
 				f.puts t[i].join("|")
 				i += 1
@@ -115,7 +109,7 @@ class Task
 	def Task.editTask(num, filename)
 		t= Task.searchForName(filename)
 		
-
+	end
 
 # This is the end for the class	
 end
