@@ -8,7 +8,7 @@ class Task
 			l = line.split("|")
 			separatedTasks << l
 		end
-
+		separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp }
 		return separatedTasks
 	end
 # For each family member that will be called with (name) the following functions split up the tasks into complete and incomplete and will print out those tasks.
