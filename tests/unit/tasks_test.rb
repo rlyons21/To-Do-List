@@ -43,8 +43,9 @@ class TaskTest < Minitest::Test
 
     def test_delete_a_task
         results = Task.deleteTask(98174836, "#{MyApp.settings.root}/tests/unit/tasks_test_delete.txt")
-        assert_equal([["i", "Bob", "Scoop the cat litter", "98174236\n"], ["c", "Bob", "Mop the mud room floor", "38374236\n"], ["i", "Mary", "Clean the fish bowl", "28374416\n"], ["c", "Mary", "Change the AC filter", "28354455\n"], ["i", "Joe", "Sweep the porch", "68364455\n"], ["c", "Joe", "Make beds", "68364456\n"], ["i", "Lisa", "Vacuum the living room carpet", "68364459\n"]], results)
+        assert_equal(nil, results)
     end
+    #After this test runs, make sure the tasks_text_delete.txt contains the same array info as tasks_test.txt
 
 
 end
