@@ -1,22 +1,24 @@
-c|Mary|Vacuum the living room carpet|68364459
+i|Joe|water the garden|70063973
+i|Bob|Clean the fish bowl|28374416
+i|Bob|Change the AC filter|28354455
+i|Joe|Sweep the porch|68364455
+c|Joe|Make beds|68364456
+i|Lisa|Wash the bathtub|48344449
 c|Joe|Do the dishes|48344448
+i|Bob|Scoop the cat litter|48344447
+i|Mary|Go to the store|19179746
 i|Bob|Nail the picture on the wall|90639210
 i|Lisa|clean the car|15674532
 i|Joe|walk the dog|58228922
 c|Lisa|walk the hamster|62948448
-i|Bob|trim the hedges|61469762
 i|Joe|Make beds|68364456
 c|Bob|Mop the basement|68364457
-i|Mary|Vacuum the living room carpet|68364459
+i|Joe|water the garden|70063973
+c|Bob|Mop the basement|68364457
 c|Mary|feed the fish|48450908
-i|Lisa|clean your room|84477141
-c|Lisa|dust the living room|83810105
 c|Joe|Filter the water|42053245
-i|Joe|Sweep the walk|68197296
 c|Joe|Sweep the walk|2570206
-i|Lisa|Dry the clothes|95514130
-i|Bob|vacuum the dining room|3130496
-i|Bob|vacuum the rug|84664417
 i|Lisa|hoist the jib|13278566
-i|Bob|clean the turtle tank|10528220
 i|Mary|rake the leaves|82831297
+c|Mary|read the news|35810288
+c|Mary|find me|42718274
