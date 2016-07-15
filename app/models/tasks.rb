@@ -8,6 +8,7 @@ class Task
 			l = line.split("|")
 			separatedTasks << l
 		end
+
 		# separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp]}
 		return separatedTasks
 	end
@@ -20,17 +21,20 @@ class Task
 				familyMemberTasks << element
 			end
 		end
+
 		return familyMemberTasks
 	end
 
 	#The below two functions sort the filtered-by-family list by incomplete and complete
 	def Task.familyMemberCompletedTasks(filename, name)
 		familyMemberComplete = Array.new
+
 		Task.searchForFamilyMember(filename, name).each do |element|
 			if element[0] == "c"
 				familyMemberComplete << element
 			end
 		end
+
 		return familyMemberComplete
 	end
 
@@ -74,7 +78,6 @@ class Task
 	# and each element has 4 elements (one for complate/incomplete, name, task, random ID)
 
 	# returns a number that represents the index of the element that contains num
-
 	def Task.findTask(num, arr)
 		numIndex = 0
 		arr.each do |element|
@@ -92,7 +95,7 @@ class Task
 	# num is a number that each task is randomly assigned, you can see them on tasts.txt
 	# filename is the txt file that stores all of our data (tasks.txt)
 
-	# Does not return anything
+	# Returns nil.
 	def Task.deleteTask(num, filename)
 		t = Task.searchForName(filename)
 		ind = Task.findTask(num, t)
