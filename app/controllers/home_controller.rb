@@ -18,7 +18,6 @@ MyApp.post "/new/process" do
 end
 
 
-
 MyApp.post "/edit" do
 	@task = params[:task]
 	@person = params[:person]
@@ -31,20 +30,8 @@ end
 
 MyApp.post "/edit/process" do
 	Task.deleteTask(params[:num],"tasks.txt")
-
-	@edit_status = params[:status]
-	@edit_task = params[:task]
-	@edit_person = params[:person]
-	@randomnumber = rand(99999999)
-
-	# TODO - Move the complexity about adding things to a 
-	# file into a separate function that's defined in
-	# a model.
-
-	somefile = File.open("tasks.txt", "a")
-	somefile.puts "#{@edit_status}|#{@edit_person}|#{@edit_task}|#{@randomnumber}"
-	somefile.close
-  redirect '/'
+	@edittask = Task.editExistingTask("tasks.txt", params[:status], params[:person], params[:task], rand(99999999))
+  	redirect '/'
 end
 
 

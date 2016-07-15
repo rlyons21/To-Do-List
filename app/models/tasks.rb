@@ -52,14 +52,21 @@ class Task
 		return familyMemberIncomplete
 	end	
 
-	#This Task is about processing a new task
+	#This function is about processing a new task
 
 	def Task.createNewTask(filename, name, task, number)
 		somefile = File.open(filename, "a")
 		somefile.puts "i|#{name}|#{task}|#{number}"
 		somefile.close
 	end
+	#This function is about editing an existing task
 
+	def Task.editExistingTask(filename, status, name, task, number)
+		somefile = File.open(filename, "a")
+		somefile.puts "#{status}|#{name}|#{task}|#{number}"
+		somefile.close
+	end
+	
 	#This section is a way to sort the overall, unfiltered list by completed and incomplete tasks!
 
 	def Task.completedTasks(filename)
