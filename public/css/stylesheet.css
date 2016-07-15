@@ -31,12 +31,22 @@ body{
 	margin-bottom:10px;
 }
 
-.navLinks__addTask{
-	text-decoration:none;
-	font-family:Arial;
-	font-size:18px;
-	color:blue;
+.addTask{
+	text-align:center;
+	background-color: #555555;
+	color:white;
+	height:60px;
+	width:130px;
+	font-size:20px;
+	border-radius:8px;
+	margin-bottom:15px;
 }
+
+.addTask:hover{
+	background-color:white;
+	color:black;
+}
+
 .navLinks__link{
 	text-decoration: none;
 	font-family:Arial;
@@ -69,11 +79,12 @@ body{
 
 .task{
 	display:flex;
+	margin-bottom:5px;
 }
 .taskList{
 	list-style: none;
 }
 
-.taskList__item{
-
+.taskList__task{
+	margin-right:5px;
 }
