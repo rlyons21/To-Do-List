@@ -1,18 +1,12 @@
-i|Joe|water the garden|70063973
-i|Bob|Clean the fish bowl|28374416
 i|Bob|Change the AC filter|28354455
-i|Joe|Sweep the porch|68364455
 c|Joe|Make beds|68364456
-i|Lisa|Wash the bathtub|48344449
 c|Joe|Do the dishes|48344448
 i|Bob|Scoop the cat litter|48344447
-i|Mary|Go to the store|19179746
 i|Bob|Nail the picture on the wall|90639210
 i|Lisa|clean the car|15674532
 i|Joe|walk the dog|58228922
 c|Lisa|walk the hamster|62948448
 i|Joe|Make beds|68364456
-c|Bob|Mop the basement|68364457
 i|Joe|water the garden|70063973
 c|Bob|Mop the basement|68364457
 c|Mary|feed the fish|48450908
@@ -24,3 +18,6 @@ c|Mary|read the news|35810288
 c|Mary|find me|42718274
 i|Mary|Run the dryer|24252905
 i|Bob|Dust the book shelves|53597052
+i|Bob|Walk the hamster |1243145
+c|Mary|Mop the basement|52679669
+c|Lisa|Vacuum the rug|34587544
