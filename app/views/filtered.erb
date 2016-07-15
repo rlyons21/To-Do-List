@@ -1,7 +1,9 @@
 <div class="left">
 	<div class="navContent">
+		<form action="/new">
+			<input class = "addTask" type="submit" value ="Add a Task">
+		</form>
 		<ul class=navLinks>
-			<li class="navigation"><a class="navLinks__addTask" href="/new">ADD A TASK</a></li>
 			<li class="navigation"><a class="navLinks__link" href="/">All Tasks</a></li>
 			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Bob">Bob</a></li>
 			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Mary">Mary</a></li>
@@ -35,6 +37,16 @@
 				<input type="submit" value="Edit">
 			</form>
 		</div>
+			<ul class="taskList">
+				<div class="task">
+					<li class = "taskList__task"><%= element[2] %></li>
+					<form method="post" action="/delete"> 
+						<input type="hidden" name="num" value ="<%= element[3]%>">
+						<input type="submit" value="Delete">
+					</form>
+				</div>
+			</ul>
+
 		<% end %>
 	<% else %>
 		<p> There are no tasks </p>
@@ -43,8 +55,8 @@
 	<h3 class="listTitle"> Completed Tasks </h3>
 	<% if @theseAreDone != nil %>
 		<% @theseAreDone.each do |element| %>
+		<ul class ="taskList">	
 			<div class="task">
-
 			<li class = "taskList__task"><%= element[2] %></li>
 			<form method="post" action="/delete"> 
 				<input type="hidden" name="num" value ="<%= element[3]%>">
@@ -55,6 +67,15 @@
 				<input type="submit" value="Edit">
 			</form>
 		</div>
+
+				<li class = "taskList__task"><%= element[2] %></li>
+				<form method="post" action="/delete"> 
+					<input type="hidden" name="num" value ="<%= element[3]%>">
+					<input type="submit" value="Delete">
+				</form>
+			</div>
+		</ul>
+
 		<% end %>
 	<% else %>
 		<p> There are no tasks </p>

@@ -6,7 +6,23 @@ body{
 	margin:0;
 	padding:0;
 	min-height: 100%;
+	width:100%;
 	background-color:#CCC3F8;
+}
+
+
+.header{
+	height:78px;
+	width:100%;
+	position:absolute;
+	top:0;
+	background-color: #ACFF9C;
+	font-family:Cursive;
+	color: #203719;
+}
+
+.familyName{
+	padding-left:45px;
 }
 
 .left{
@@ -18,7 +34,7 @@ body{
 }
 
 .navContent{
-	height:100%;
+	height:auto;
 	width:100%;
 	margin-left:20px;
 }
@@ -31,12 +47,22 @@ body{
 	margin-bottom:10px;
 }
 
-.navLinks__addTask{
-	text-decoration:none;
-	font-family:Arial;
-	font-size:18px;
-	color:blue;
+.addTask{
+	text-align:center;
+	background-color: #555555;
+	color:white;
+	height:60px;
+	width:130px;
+	font-size:20px;
+	border-radius:8px;
+	margin-bottom:15px;
 }
+
+.addTask:hover{
+	background-color:white;
+	color:black;
+}
+
 .navLinks__link{
 	text-decoration: none;
 	font-family:Arial;
@@ -44,36 +70,26 @@ body{
 	color:black;
 }
 
-.header{
-	height:78px;
-	width:100%;
-	position:absolute;
-	top:0;
-	background-color: #ACFF9C;
-	font-family:Cursive;
-	color: #203719;
-}
-.familyName{
-	padding-left:45px;
-}
-
 .mainContent{
-	width:80%;
+	width:auto;
 	margin-left:225px;
 	margin-top:78px;
 }
 
 .listTitle{
 	text-decoration: underline;
+	margin-top:30px;
+	margin-bottom:15px;
 }
 
 .task{
 	display:flex;
+	margin-bottom:5px;
 }
 .taskList{
 	list-style: none;
 }
 
-.taskList__item{
-
+.taskList__task{
+	margin-right:5px;
 }
