@@ -1,4 +1,3 @@
-
 <div class="left">
 	<div class="navContent">
 		<ul class=navLinks>
@@ -20,31 +19,27 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 <% @incompleteTasks.each do |element| %>
 	<ul class = "taskList">
 		<div class="task">
-			<li class = "taskList__task"><%= element %></li>
-			<form method="post" action="/delete">
-				<input type="hidden" name="num" value ="0">
+
+			<li class = "taskList__task"><%= element[2] %></li>
+			<form method="post" action="/delete"> 
+				<input type="hidden" name="num" value ="<%= element[3]%>">
 				<input type="submit" value="Delete">
 			</form>
 		</div>
 	</ul>
 	
-	<form method="post" action="/"> 
-		<textarea class= "taskList__item"> <%= element %></textarea>
-		<input type="hidden" name="num" value="2">
-		<input type="submit" value="Delete">
-	</form>
+
 <% end %>
 
 <h1 class="listTitle">Completed Tasks</h1>
 <% @completedTasks.each do |element| %>
 	<ul class="taskList">
-		<li class="taskList__task"><%= element %></li>
+		<li class="taskList__task"><%= element[2] %></li>
 		<form method="post" action="/delete"> 
-			<input type="hidden" name="num" value ="0">
+			<input type="hidden" name="num" value ="<%= element[3]%>">
 			<input type="submit" value="Delete">
 		</form>
 	</ul>
 <% end %>
 
 </div>
-

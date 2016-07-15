@@ -45,7 +45,7 @@ class Task
 	def Task.familyMemberToDos(filename, name)
 		tasksToBeDone = Array.new
 		Task.familyMemberIncompleteTasks(filename, name).each do |element|
-			tasksToBeDone << element[2]
+			tasksToBeDone << element
 		end
 		return tasksToBeDone
 	end
@@ -53,7 +53,7 @@ class Task
 	def Task.familyMemberDone(filename, name)
 		tasksDone = Array.new
 		Task.familyMemberCompletedTasks(filename, name).each do |element|
-			tasksDone << element[2]
+			tasksDone << element
 		end
 		return tasksDone
 	end
@@ -72,7 +72,7 @@ class Task
 	def Task.done(filename)
 		completedFamilyTasks = Array.new
 		Task.completedTasks(filename).each do |element|
-			completedFamilyTasks << element[2]
+			completedFamilyTasks << element
 		end
 		return completedFamilyTasks
 	end
@@ -90,18 +90,29 @@ class Task
 	def Task.notDone(filename)
 		notDoneFamilyTasks = Array.new
 		Task.incompleteTasks(filename).each do |element|
-			notDoneFamilyTasks << element[2]
+			notDoneFamilyTasks << element
 		end
 		return notDoneFamilyTasks
 	end
 
 
 
+	def Task.findTask(num, arr)
+		numIndex = 0
+		arr.each do |element|
+			if element[3].to_i == num.to_i
+				return numIndex
+			else
+				numIndex += 1
+			end
+		end
+		
+	end
 
-	def Task.deleteTask(num,filename)
-		n = num.to_i 
+	def Task.deleteTask(num, filename)
 		t = Task.searchForName(filename)
-		t.delete_at(n)
+		ind = Task.findTask(num, t)
+		t.delete_at(ind)
 		i=0
 		File.delete("tasks.txt")
 		File.open("tasks.txt", "a") { |f|

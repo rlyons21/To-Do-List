@@ -1,40 +1,63 @@
 <h1> EDIT </h1>
 
-<form action="/edit" method="get">
+<div class="mainContent">
+
+<form method="post" action="/edit/process" >
 		<div>
 			<input type="text" name="task">
 		</div>
-
 		<div>
-		  <label>
-		   <input type="radio" name="person" value="Bob">
-		    Bob
-		  </label>
+			<p>Family Member</p>
 		</div>
-
 		<div>
-		  <label>
-		    <input type="radio" name="person" value="Mary">
-		    Mary
-		  </label>
-		</div>
+			<div>
+			  <label>
+			   <input type="radio" name="person" value="Bob">
+			    Bob
+			  </label>
+			</div>
 
+			<div>
+			  <label>
+			    <input type="radio" name="person" value="Mary">
+			    Mary
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input type="radio" name="person" value="Joe">
+			    Joe
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input type="radio" name="person" value="Lisa">
+			    Lisa
+			  </label>
+			</div>
+		</div>
 		<div>
-		  <label>
-		    <input type="radio" name="person" value="Joe">
-		    Joe
-		  </label>
+			<p>Status</p>
 		</div>
-
 		<div>
-		  <label>
-		    <input type="radio" name="person" value="Lisa">
-		    Lisa
-		  </label>
+			<div>
+			  <label>
+			    <input type="radio" name="status" value="i">
+			    Incomplete
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input type="radio" name="status" value="c">
+			    Complete
+			  </label>
+			</div>
 		</div>
-
-
 
 		<button type="submit" value="Submit">Submit</button>
   		<button href="/" type="reset" value="Reset">Cancel</button>
-	</form>
+</form>
+</div>
