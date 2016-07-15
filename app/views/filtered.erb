@@ -24,12 +24,13 @@
 	<% if !@theseAreNotDone.nil? %>
 		<% @theseAreNotDone.each do |element| %>
 			<div class="task">
-				<p><%= element %></p>
-				<form method="post" action="/delete"> 
-					<input type="hidden" name="num" value ="0">
-					<input type="submit" value="Delete">
-				</form>
-			</div>
+
+			<li class = "taskList__task"><%= element[2] %></li>
+			<form method="post" action="/delete"> 
+				<input type="hidden" name="num" value ="<%= element[3]%>">
+				<input type="submit" value="Delete">
+			</form>
+		</div>
 		<% end %>
 	<% else %>
 		<p> There are no tasks </p>
@@ -39,12 +40,13 @@
 	<% if @theseAreDone != nil %>
 		<% @theseAreDone.each do |element| %>
 			<div class="task">
-				<p><%= element %></p>
-				<form method="post" action="/delete"> 
-					<input type="hidden" name="num" value ="0">
-					<input type="submit" value="Delete">
-				</form>
-			</div>
+
+			<li class = "taskList__task"><%= element[2] %></li>
+			<form method="post" action="/delete"> 
+				<input type="hidden" name="num" value ="<%= element[3]%>">
+				<input type="submit" value="Delete">
+			</form>
+		</div>
 		<% end %>
 	<% else %>
 		<p> There are no tasks </p>

@@ -1,13 +1,5 @@
-i|Bob|Mop the mud room floor|38374236
-c|Mary|Vacuum the living room carpet|68364459
 i|Lisa|Wash the bathtub|48344449
-c|Bob|Scoop the cat litter|48344447
-i|Mary|Go to the store|19179746
 i|Bob|Nail the picture on the wall|90639210
-i|Joe|walk the dog|58228922
-i|Bob|trim the hedges|61469762
 c|Bob|Mop the basement|68364457
 i|Mary|Vacuum the living room carpet|68364459
 i|Joe|water the garden|70063973
-i|Mary|feed the fish|48450908
-c|Lisa|clean your room|84477141
