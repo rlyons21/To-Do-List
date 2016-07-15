@@ -16,3 +16,4 @@ i|Lisa|hoist the jib|13278566
 i|Mary|rake the leaves|82831297
 i|Bob|Walk the hamster |1243145
 c|Mary|Mop the basement|52679669
+c|Lisa|Vacuum the rug|34587544
