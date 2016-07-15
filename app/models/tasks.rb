@@ -103,8 +103,8 @@ class Task
 		ind = Task.findTask(num, t)
 		t.delete_at(ind)
 		i=0
-		File.delete(filename)
-		File.open(filename, "a") { |f|
+		File.delete("tasks.txt")
+		File.open("tasks.txt", "a") { |f|
 			while i < t.length
 				f.puts t[i].join("|")
 				i += 1
@@ -117,8 +117,8 @@ class Task
 		ind = Task.findTask(num, t)
 		t.delete_at(ind)
 		i=0
-		File.delete(filename)
-		File.open(filename, "a") { |f|
+		File.delete("tasks.txt")
+		File.open("tasks.txt", "a") { |f|
 			while i < t.length
 				f.puts t[i].join("|")
 				i += 1

@@ -19,6 +19,7 @@
 	<h3 class="listTitle"> To Do </h3>
 	<% if !@theseAreNotDone.nil? %>
 		<% @theseAreNotDone.each do |element| %>
+			<ul class="taskList">
 			<div class="task">
 
 			<li class = "taskList__task"><%= element[2] %></li>
@@ -31,14 +32,7 @@
 				<input type="submit" value="Edit">
 			</form>
 		</div>
-			<ul class="taskList">
-				<div class="task">
-					<li class = "taskList__task"><%= element[2] %></li>
-					<form method="post" action="/delete"> 
-						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input type="submit" value="Delete">
-					</form>
-				</div>
+			
 			</ul>
 
 		<% end %>
@@ -60,13 +54,7 @@
 				<input type="hidden" name="num" value ="<%= element[3]%>">
 				<input type="submit" value="Edit">
 			</form>
-		</div>
-
-				<li class = "taskList__task"><%= element[2] %></li>
-				<form method="post" action="/delete"> 
-					<input type="hidden" name="num" value ="<%= element[3]%>">
-					<input type="submit" value="Delete">
-				</form>
+		
 			</div>
 		</ul>
 
