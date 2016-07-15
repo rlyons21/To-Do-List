@@ -3,6 +3,7 @@
 		<form action="/new">
 			<input class = "addTask" type="submit" value ="Add a Task">
 		</form>
+
 		<ul class=navLinks>
 			<li class="navigation"><a class="navLinks__link" href="/">All Tasks</a></li>
 			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Bob">Bob</a></li>
@@ -14,27 +15,30 @@
 </div>
 
 <div class="mainContent">
+	<!-- TODO - Change 'X' to a real name. -->
 	<h1> X's Tasks</h1>
 
 	<h3 class="listTitle"> To Do </h3>
+
 	<% if !@theseAreNotDone.nil? %>
 		<% @theseAreNotDone.each do |element| %>
 			<ul class="taskList">
-			<div class="task">
+				<div class="task">
 
-			<li class = "taskList__task"><%= element[2] %></li>
-			<form method="post" action="/delete"> 
-				<input type="hidden" name="num" value ="<%= element[3]%>">
-				<input type="submit" value="Delete">
-			</form>
-			<form method="post" action="/edit"> 
-				<input type="hidden" name="num" value ="<%= element[3]%>">
-				<input type="submit" value="Edit">
-			</form>
-		</div>
-			
+					<li class = "taskList__task"><%= element[2] %></li>
+
+					<!-- TODO - Everything in a UL should be in a LI. No orphan forms like below. -->
+					<form method="post" action="/delete"> 
+						<input type="hidden" name="num" value ="<%= element[3]%>">
+						<input type="submit" value="Delete">
+					</form>
+
+					<form method="post" action="/edit"> 
+						<input type="hidden" name="num" value ="<%= element[3]%>">
+						<input type="submit" value="Edit">
+					</form>
+				</div>
 			</ul>
-
 		<% end %>
 	<% else %>
 		<p> There are no tasks! </p>
@@ -43,6 +47,9 @@
 	<h3 class="listTitle"> Completed Tasks </h3>
 	<% if !@theseAreDone.nil? %>
 		<% @theseAreDone.each do |element| %>
+
+		<!-- TODO - Same indentation and HTML structure improvements as above. -->
+		
 		<ul class ="taskList">	
 			<div class="task">
 			<li class = "taskList__task"><%= element[2] %></li>
