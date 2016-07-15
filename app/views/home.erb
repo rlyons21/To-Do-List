@@ -1,7 +1,9 @@
 <div class="left">
 	<div class="navContent">
+		<form action="/new">
+			<input class = "addTask" type="submit" value ="Add a Task">
+		</form>
 		<ul class=navLinks>
-			<li class="navigation"><a class="navLinks__addTask" href="/new">ADD A TASK</a></li>
 			<li class="navigation"><a class="navLinks__link" href="/">All Tasks</a></li>
 			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Bob">Bob</a></li>
 			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Mary">Mary</a></li>
@@ -24,6 +26,7 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 			<form method="post" action="/delete"> 
 				<input type="hidden" name="num" value ="<%= element[3]%>">
 				<input type="submit" value="Delete">
+				<input type="submit" value="Edit">
 			</form>
 		</div>
 	</ul>
@@ -34,11 +37,14 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 <h1 class="listTitle">Completed Tasks</h1>
 <% @completedTasks.each do |element| %>
 	<ul class="taskList">
+	<div class="task">
 		<li class="taskList__task"><%= element[2] %></li>
 		<form method="post" action="/delete"> 
 			<input type="hidden" name="num" value ="<%= element[3]%>">
 			<input type="submit" value="Delete">
+			<input type="submit" value="Edit">
 		</form>
+	</div>
 	</ul>
 <% end %>
 

@@ -63,6 +63,21 @@ class Task
 		return incompleteTasks
 	end
 
+	def Task.notDone(filename)
+		notDoneFamilyTasks = Array.new
+		Task.incompleteTasks(filename).each do |element|
+			notDoneFamilyTasks << element
+		end
+		return notDoneFamilyTasks
+	end
+
+# Finds the index of the nested array that contains num
+
+# num is a number that each task is randomly assigned, you can see them on tasts.txt
+# arr is an array of arrays. Each line in the tasks.txt represents one element of arr 
+# and each element has 4 elements (one for complate/incomplete, name, task, random ID)
+
+# returns a number that represents the index of the element that contains num
 
 	def Task.findTask(num, arr)
 		numIndex = 0
@@ -75,6 +90,13 @@ class Task
 		end
 		
 	end
+
+# Deletes a given line from tasks.txt
+
+# num is a number that each task is randomly assigned, you can see them on tasts.txt
+# filename is the txt file that stores all of our data (tasks.txt)
+
+# Does not return anything
 
 	def Task.deleteTask(num, filename)
 		t = Task.searchForName(filename)
@@ -89,6 +111,10 @@ class Task
 			end
 		}
 	end
+
+	def Task.editTask(num, filename)
+		t= Task.searchForName(filename)
+		
 
 
 # This is the end for the class	
