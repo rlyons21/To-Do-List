@@ -136,6 +136,10 @@ class Task
 		}
 	end
 
+	def Task.editTask(num, filename)
+		t= Task.searchForName(filename)
+		
+
 
 # This is the end for the class	
 end
