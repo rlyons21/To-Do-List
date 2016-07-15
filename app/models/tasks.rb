@@ -138,7 +138,7 @@ class Task
 
 	def Task.editTask(num, filename)
 		t= Task.searchForName(filename)
-		
+	end	
 
 
 # This is the end for the class	

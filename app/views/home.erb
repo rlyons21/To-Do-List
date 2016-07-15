@@ -25,8 +25,7 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 			<li class = "taskList__task"><%= element[2] %></li>
 			<form method="post" action="/delete"> 
 				<input type="hidden" name="num" value ="<%= element[3]%>">
-				<input type="submit" value="Delete">
-				<input type="submit" value="Edit">
+				<input class="deleteButton" type="submit" value="Delete">
 			</form>
 		</div>
 	</ul>
@@ -42,7 +41,6 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 		<form method="post" action="/delete"> 
 			<input type="hidden" name="num" value ="<%= element[3]%>">
 			<input type="submit" value="Delete">
-			<input type="submit" value="Edit">
 		</form>
 	</div>
 	</ul>
