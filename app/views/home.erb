@@ -28,6 +28,9 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 			<form method="post" action="/edit"> 
 				<input type="hidden" name="num" value ="<%= element[3]%>">
 				<input class="editButton" type="submit" value="Edit">
+				<input type="hidden" name="status" value ="<%= element[0]%>">
+				<input type="hidden" name="task" value ="<%= element[2]%>">
+				<input type="hidden" name="person" value ="<%= element[1]%>">
 			</form>
 			<li class = "taskList__task"><%= element[2] %></li>
 		</div>
@@ -48,6 +51,9 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 			<form method="post" action="/edit"> 
 				<input type="hidden" name="num" value ="<%= element[3]%>">
 				<input class="editButton" type="submit" value="Edit">
+				<input type="hidden" name="status" value ="<%= element[0]%>">
+				<input type="hidden" name="task" value ="<%= element[2]%>">
+				<input type="hidden" name="person" value ="<%= element[1]%>">
 			</form>
 			<li class="taskList__task"><%= element[2] %></li>
 		</div>

@@ -15,8 +15,8 @@
 </div>
 
 <div class="mainContent">
-	<!-- TODO - Change 'X' to a real name. -->
-	<h1> X's Tasks</h1>
+	
+	<h1> <%= @member %>'s Tasks</h1>
 
 	<h3 class="toDoTitle"> To Do </h3>
 
@@ -33,6 +33,9 @@
 					<form method="post" action="/edit"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
 						<input class="editButton" type="submit" value="Edit">
+						<input type="hidden" name="status" value ="<%= element[0]%>">
+						<input type="hidden" name="task" value ="<%= element[2]%>">
+						<input type="hidden" name="person" value ="<%= element[1]%>">
 					</form>
 					<li class = "taskList__task"><%= element[2] %></li>
 				</div>
@@ -46,17 +49,22 @@
 	<% if !@theseAreDone.nil? %>
 		<% @theseAreDone.each do |element| %>
 		
-			<ul class ="taskList">	
-				<div class="task">
-					<form method="post" action="/delete"> 
-						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input class="deleteButton" type="submit" value="Delete">
-					</form>
-					
-					<form method="post" action="/edit"> 
-						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input class="editButton" type="submit" value="Edit">
-					</form>
+		<ul class ="taskList">	
+			<div class="task">
+				
+				<form method="post" action="/delete"> 
+					<input type="hidden" name="num" value ="<%= element[3]%>">
+					<input class="deleteButton" type="submit" value="Delete">
+				</form>
+				
+				<form method="post" action="/edit"> 
+					<input type="hidden" name="num" value ="<%= element[3]%>">
+					<input class="editButton" type="submit" value="Edit">
+					<input type="hidden" name="status" value ="<%= element[0]%>">
+					<input type="hidden" name="task" value ="<%= element[2]%>">
+					<input type="hidden" name="person" value ="<%= element[1]%>">
+				</form>
+
 					<li class = "taskList__task"><%= element[2] %></li>
 				</div>
 			</ul>

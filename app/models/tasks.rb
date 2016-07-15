@@ -3,6 +3,7 @@ class Task
 	# This function is supposed to split the strings stored in the text fine to separate them into different elements so that each element can be used or returned as needed
 	def Task.searchForName(filename)
 		separatedTasks = Array.new
+
 		file = File.open(filename, "r")
 		file.each_line do |line|
 			l = line.split("|")
@@ -16,6 +17,7 @@ class Task
 	#This funciton sorts the unfiltered list by family member
 	def Task.searchForFamilyMember(filename, name)
 		familyMemberTasks = Array.new
+
 		Task.searchForName(filename).each do |element|
 			if element[1] == name
 				familyMemberTasks << element
@@ -40,33 +42,54 @@ class Task
 
 	def Task.familyMemberIncompleteTasks(filename, name)
 		familyMemberIncomplete = Array.new
+
 		Task.searchForFamilyMember(filename, name).each do |element|
 			if element[0] == "i"
 				familyMemberIncomplete << element
 			end
 		end
+
 		return familyMemberIncomplete
 	end	
 
+	#This function is about processing a new task
+
+	def Task.createNewTask(filename, name, task, number)
+		somefile = File.open(filename, "a")
+		somefile.puts "i|#{name}|#{task}|#{number}"
+		somefile.close
+	end
+	#This function is about editing an existing task
+
+	def Task.editExistingTask(filename, status, name, task, number)
+		somefile = File.open(filename, "a")
+		somefile.puts "#{status}|#{name}|#{task}|#{number}"
+		somefile.close
+	end
+	
 	#This section is a way to sort the overall, unfiltered list by completed and incomplete tasks!
 
 	def Task.completedTasks(filename)
 		completed = Array.new
+
 		Task.searchForName(filename).each do |element|
 			if element[0] == "c"
 				completed << element
 			end
 		end
+
 		return completed
 	end
 
 	def Task.incompleteTasks(filename)
 		incompleteTasks = Array.new
+
 		Task.searchForName(filename).each do |element|
 			if element[0] == "i"
 				incompleteTasks << element
 			end
 		end
+
 		return incompleteTasks
 	end
 
