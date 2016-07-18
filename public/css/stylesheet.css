@@ -10,7 +10,6 @@ body{
 	padding:0;
 	height: 100%;
 	width:100%;
-	background-color:#CCC3F8;
 }
 
 
@@ -79,8 +78,11 @@ body{
 
 .mainContent{
 	width:auto;
-	margin-left:225px;
+	margin-left:200px;
 	margin-top:78px;
+	padding-bottom:200px;
+	background-image: url(/images/background.jpg);
+	background-position: right bottom;
 }
 
 .toDoTitle{
@@ -99,7 +101,11 @@ body{
 
 .task{
 	display:flex;
-	margin-bottom:5px;
+	margin:3px 50px 3px 50px;
+	background-color:white;
+	padding:5px;
+	border-radius:4px;
+	font-family:sans-serif;
 }
 .taskList{
 	list-style: none;
@@ -179,4 +185,9 @@ body{
 	font-size:14px;
 	background-color:#E3DDFF;
 
+}
+
+.delete-edit{
+	height:15px;
+	width:15px;
 }
