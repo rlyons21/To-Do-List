@@ -13,6 +13,7 @@ end
 
 MyApp.post "/new/process" do
 
+	@sendBobEmail = Task.sendTaskReminder("michaeljducey@gmail.com", "Bob")
 	@newtask = Task.createNewTask("tasks.txt", params[:person], params[:task], rand(99999999))
 	redirect '/'
 end
