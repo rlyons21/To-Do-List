@@ -143,7 +143,7 @@ class Task
 		RestClient.post "https://api:key-76bc324dc7738d71ae4793d03c5df9d7"\
 		"@api.mailgun.net/v3/sandboxfd37c2256d46459990db24129a969463.mailgun.org/messages",
 		:from => "Mailgun Sandbox <postmaster@sandboxfd37c2256d46459990db24129a969463.mailgun.org>",
-		:to => "email",
+		:to => email,
 		:subject => "Hello #{name}",
 		:text => "Hello #{name}, You have been assigned a new task on the Johnson Family To-Do List.  Please visit the site to see your new task."
 	end
