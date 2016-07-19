@@ -21,4 +21,3 @@ i|Lisa|Hoist the jib|82926181
 i|Mary|Nail the picture on the wall|66757276
 i|Mary|Fluff a pillow|8855455
 i|Lisa|Walk the paint|89138679
-i|Joe|go to joe!|70137697
