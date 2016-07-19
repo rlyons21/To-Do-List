@@ -19,5 +19,6 @@ c|Mary|Read the news|26207105
 c|Joe|Trim the front hedges|68788894
 i|Lisa|Hoist the jib|82926181
 i|Mary|Nail the picture on the wall|66757276
-i|Bob|Google how to us Rest-Client|94776927
-i|Bob|Google how to us Rest-Client|73110112
+i|Mary|Fluff a pillow|8855455
+i|Lisa|Walk the paint|89138679
+i|Joe|go to joe!|70137697

@@ -138,15 +138,32 @@ class Task
 		ind = Task.findTask(num, t)
 	end
 
+	def Task.sortByName(selectedFam, name1, name2, name3, name4, email1, email2, email3, email4)
+		if selectedFam == name1
+			rightEmail = email1
+			return rightEmail
+		elsif selectedFam == name2
+			rightEmail = email2
+			return rightEmail
+		elsif selectedFam == name3
+			rightEmail = email3
+			return rightEmail
+		elsif selectedFam == name4
+			rightEmail = email4
+			return rightEmail
+		end
+	end
+
 	def Task.sendTaskReminder(email, name)
 		require_relative "secret.rb"
-		RestClient.post "https://api:key-76bc324dc7738d71ae4793d03c5df9d7"\
+		RestClient.post "https://api:key-#{API_KEY}"\
 		"@api.mailgun.net/v3/sandboxfd37c2256d46459990db24129a969463.mailgun.org/messages",
 		:from => "Mailgun Sandbox <postmaster@sandboxfd37c2256d46459990db24129a969463.mailgun.org>",
 		:to => email,
 		:subject => "Hello #{name}",
 		:text => "Hello #{name}, You have been assigned a new task on the Johnson Family To-Do List.  Please visit the site to see your new task."
 	end
+
 
 # This is the end for the class	
 end
