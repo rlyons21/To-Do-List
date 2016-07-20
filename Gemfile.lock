@@ -99,6 +99,7 @@ DEPENDENCIES
   activesupport
   dotenv
   inch
+  json
   minitest-rg
   pry
   rake
