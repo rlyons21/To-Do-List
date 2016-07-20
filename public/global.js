@@ -1,7 +1,8 @@
 window.addEventListener("load", function(){
-	complete_button = document.getElementsByClassName("completeBtnHome");
+	complete_button = document.getElementsByClassName("completeBtn");
 	toDo_button = document.getElementsByClassName("toDoBtn");
 
+	
 	complete_button[0].addEventListener("click", function(){
 		var task_list = document.getElementsByClassName("completeTask");
 		
@@ -16,6 +17,7 @@ window.addEventListener("load", function(){
 		}
 	});
 
+	
 	toDo_button[0].addEventListener("click", function(){
 		var task_list = document.getElementsByClassName("task");
 		

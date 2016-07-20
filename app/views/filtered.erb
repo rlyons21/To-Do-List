@@ -1,3 +1,5 @@
+
+
 <div class="left">
 	<div class="navContent">
 		<form action="/new">
@@ -18,26 +20,27 @@
 	
 	<h1> <%= @member %>'s Tasks</h1>
 
-	<h3 class="toDoTitle"> To Do </h3>
+	<button class="toDoBtn">To Do List</button>
 
 	<% if !@theseAreNotDone.nil? %>
 		<% @theseAreNotDone.each do |element| %>
 			<ul class="taskList">
 				<div class="task">
-
-					<form method="post" action="/delete"> 
-						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
-					</form>
-
-					<form method="post" action="/edit"> 
-						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<span title="Edit Task"><input class ="delete-edit" type="image" src="/images/edit-icon.png" alt="E"></span>
-						<input type="hidden" name="status" value ="<%= element[0]%>">
-						<input type="hidden" name="task" value ="<%= element[2]%>">
-						<input type="hidden" name="person" value ="<%= element[1]%>">
-					</form>
 					<li class = "taskList__task"><%= element[2] %></li>
+						<div class="icons">
+							<form method="post" action="/delete"> 
+								<input type="hidden" name="num" value ="<%= element[3]%>">
+								<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
+							</form>
+
+							<form method="post" action="/edit"> 
+								<input type="hidden" name="num" value ="<%= element[3]%>">
+								<span title="Edit Task"><input class ="delete-edit" type="image" src="/images/edit-icon.png" alt="E"></span>
+								<input type="hidden" name="status" value ="<%= element[0]%>">
+								<input type="hidden" name="task" value ="<%= element[2]%>">
+								<input type="hidden" name="person" value ="<%= element[1]%>">
+							</form>
+						</div>
 				</div>
 			</ul>
 		<% end %>
@@ -45,13 +48,14 @@
 		<p> There are no tasks! </p>
 	<% end %>
 
-	<h3 class="completeTitle"> Completed Tasks </h3>
+	<button class="completeBtn">Completed Tasks</button>
 	<% if !@theseAreDone.nil? %>
 		<% @theseAreDone.each do |element| %>
 		
 		<ul class ="taskList">	
-			<div class="task">
-				
+			<div class="completeTask">
+				<li class = "taskList__task"><%= element[2] %></li>
+				<div class="icons">
 				<form method="post" action="/delete"> 
 					<input type="hidden" name="num" value ="<%= element[3]%>">
 					<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
@@ -64,8 +68,8 @@
 					<input type="hidden" name="task" value ="<%= element[2]%>">
 					<input type="hidden" name="person" value ="<%= element[1]%>">
 				</form>
-
-					<li class = "taskList__task"><%= element[2] %></li>
+				</div>
+					
 				</div>
 			</ul>
 		<% end %>

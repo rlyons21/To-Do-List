@@ -97,7 +97,7 @@ body{
 	font-family:Arial;
 }
 
-.completeBtnHome{
+.completeBtn{
 	height:50px;
 	width:200px;
 	margin-top:30px;
@@ -110,6 +110,7 @@ body{
 
 .task{
 	display:flex;
+	justify-content: space-between;
 	margin:3px 50px 3px 50px;
 	padding:5px;
 	border-radius:4px;
@@ -119,11 +120,16 @@ body{
 
 .completeTask{
 	display:flex;
+	justify-content: space-between;
 	margin:3px 50px 3px 50px;
 	padding:5px;
 	border-radius:4px;
 	font-family:sans-serif;
 	background:rgba(255,255,255,0.7);
+}
+
+.icons{
+	display:flex;
 }
 
 .taskList{
