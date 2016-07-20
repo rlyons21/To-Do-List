@@ -1,6 +1,7 @@
 class Task
 
 	# This function is supposed to split the strings stored in the text fine to separate them into different elements so that each element can be used or returned as needed
+	
 	def Task.searchForName(filename)
 		separatedTasks = Array.new
 
@@ -14,7 +15,8 @@ class Task
 		return separatedTasks
 	end
 
-	#This funciton sorts the unfiltered list by family member
+	# This function sorts the unfiltered list by family member
+	
 	def Task.searchForFamilyMember(filename, name)
 		familyMemberTasks = Array.new
 
@@ -27,7 +29,8 @@ class Task
 		return familyMemberTasks
 	end
 
-	#The below two functions sort the filtered-by-family list by incomplete and complete
+	# The below two functions sort the filtered-by-family list by incomplete and complete
+	
 	def Task.familyMemberCompletedTasks(filename, name)
 		familyMemberComplete = Array.new
 
@@ -52,14 +55,15 @@ class Task
 		return familyMemberIncomplete
 	end	
 
-	#This function is about processing a new task
+	# This function is about processing a new task
 
 	def Task.createNewTask(filename, name, task, number)
 		somefile = File.open(filename, "a")
 		somefile.puts "i|#{name}|#{task}|#{number}"
 		somefile.close
 	end
-	#This function is about editing an existing task
+
+	# This function is about editing an existing task
 
 	def Task.editExistingTask(filename, status, name, task, number)
 		somefile = File.open(filename, "a")
@@ -67,7 +71,8 @@ class Task
 		somefile.close
 	end
 	
-	#This section is a way to sort the overall, unfiltered list by completed and incomplete tasks!
+	# This section is a way to sort the overall, unfiltered list by completed and incomplete tasks!
+	# These functions appears on the main page!
 
 	def Task.completedTasks(filename)
 		completed = Array.new
@@ -100,7 +105,7 @@ class Task
 	# arr is an array of arrays. Each line in the tasks.txt represents one element of arr 
 	# and each element has 4 elements (one for complate/incomplete, name, task, random ID)
 
-	# returns a number that represents the index of the element that contains num
+	# Returns a number that represents the index of the element that contains num
 	def Task.findTask(num, arr)
 		numIndex = 0
 		arr.each do |element|
@@ -138,6 +143,10 @@ class Task
 		ind = Task.findTask(num, t)
 	end
 
+	# This function is the method by which the family emails are sent.  It's a conditional that checks the
+	# selected family member (selectedFam) and runs it to see which name variable is its equivalent.  It then
+	# sends and email to that family member's email.
+
 	def Task.sortByName(selectedFam, name1, name2, name3, name4, email1, email2, email3, email4)
 		if selectedFam == name1
 			rightEmail = email1
@@ -154,6 +163,8 @@ class Task
 		end
 	end
 
+	# This is the function that uses the mailgun API to send an email.  It contains the email content.
+
 	def Task.sendTaskReminder(email, name)
 		require_relative "secret.rb"
 		RestClient.post "https://api:key-#{API_KEY}"\
@@ -165,6 +176,6 @@ class Task
 	end
 
 
-# This is the end for the class	
+# This is the end for the class	Task.
 end
 
