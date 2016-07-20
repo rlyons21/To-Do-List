@@ -39,11 +39,11 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 
 <% end %>
 
-<h2 class="completeTitle">Completed Tasks</h2>
+<button class="completeBtnHome">Completed Tasks</button>
 <% @completedTasks.each do |element| %>
-	<ul class="taskList">
+	<ul class="completeTaskList">
 
-		<div class="task">
+		<div class="completeTask">
 			<form method="post" action="/delete"> 
 				<input type="hidden" name="num" value ="<%= element[3]%>">
 				<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>

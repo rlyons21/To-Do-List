@@ -92,11 +92,15 @@ body{
 	margin-left:80px;
 }
 
-.completeTitle{
-	text-decoration: underline;
+.completeBtnHome{
+	height:50px;
+	width:200px;
 	margin-top:30px;
 	margin-bottom:15px;
 	margin-left:40px;
+	border-radius:6px;
+	font-size: 16px;
+	font-family:Arial;
 }
 
 .task{
@@ -107,7 +111,21 @@ body{
 	font-family:sans-serif;
 	background:rgba(255,255,255,0.7);
 }
+
+.completeTask{
+	display:flex;
+	margin:3px 50px 3px 50px;
+	padding:5px;
+	border-radius:4px;
+	font-family:sans-serif;
+	background:rgba(255,255,255,0.7);
+}
+
 .taskList{
+	list-style: none;
+}
+
+.completeTaskList{
 	list-style: none;
 }
 

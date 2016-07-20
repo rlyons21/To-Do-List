@@ -1,16 +1,18 @@
 window.addEventListener("load", function(){
-	var toDoToggle = document.getElementById("toDoTitleHome");
+	button = document.getElementsByClassName("completeBtnHome");
 
-	toDoToggle.addEventListener("click", function(){
-		var toDoTasks = document.getElementsByClassName("toDoTask");
-		if(toDoTasks[0].style.display == "none"){
-				for(var i=0; i<toDoTasks.length; i++){
-					toDoTasks[i].style.display = "flex";}
+	button[0].addEventListener("click", function(){
+		var task_list = document.getElementsByClassName("completeTask");
+		
+		if(task_list[0].style.display == "flex"){
+			for(var i=0; i<task_list.length; i++){
+					task_list[i].style.display = "none";
 				}
-			else {for(var i=0; i<toDoTasks.length; i++){
-					toDoTasks[i].style.display = "none";}
-
-			}
+		}else{ 
+			for(var i=0; i<task_list.length; i++){
+					task_list[i].style.display = "flex";
+				}
+		}
 	});
 
 });
