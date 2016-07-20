@@ -27,12 +27,12 @@
 
 					<form method="post" action="/delete"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input class="deleteButton" type="submit" value="Delete">
+						<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
 					</form>
 
 					<form method="post" action="/edit"> 
 						<input type="hidden" name="num" value ="<%= element[3]%>">
-						<input class="editButton" type="submit" value="Edit">
+						<span title="Edit Task"><input class ="delete-edit" type="image" src="/images/edit-icon.png" alt="E"></span>
 						<input type="hidden" name="status" value ="<%= element[0]%>">
 						<input type="hidden" name="task" value ="<%= element[2]%>">
 						<input type="hidden" name="person" value ="<%= element[1]%>">
@@ -54,12 +54,12 @@
 				
 				<form method="post" action="/delete"> 
 					<input type="hidden" name="num" value ="<%= element[3]%>">
-					<input class="deleteButton" type="submit" value="Delete">
+					<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
 				</form>
 				
 				<form method="post" action="/edit"> 
 					<input type="hidden" name="num" value ="<%= element[3]%>">
-					<input class="editButton" type="submit" value="Edit">
+					<span title="Edit Task"><input class ="delete-edit" type="image" src="/images/edit-icon.png" alt="E"></span>
 					<input type="hidden" name="status" value ="<%= element[0]%>">
 					<input type="hidden" name="task" value ="<%= element[2]%>">
 					<input type="hidden" name="person" value ="<%= element[1]%>">
