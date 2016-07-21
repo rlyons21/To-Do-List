@@ -11,8 +11,8 @@ class Task
 			separatedTasks << l
 		end
 
-		#separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp]}
-		return separatedTasks
+		return separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp]}
+		# return separatedTasks
 	end
 
 	# This function sorts the unfiltered list by family member
