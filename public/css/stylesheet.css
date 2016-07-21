@@ -80,7 +80,7 @@ body{
 	width:auto;
 	margin-left:200px;
 	margin-top:78px;
-	height:100vh;
+	min-height:100vh;
 	padding-bottom:200px;
 	background-image: url(/images/background.jpg);
 	background-position: right bottom;

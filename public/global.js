@@ -4,6 +4,7 @@ window.addEventListener("load", function(){
 	toDo_button = document.getElementsByClassName("toDoBtn");
 	addTask_button = document.getElementsByClassName("addTask");
 	cancelAddTask_button = document.getElementsByClassName("cancelButton");
+	editTask_button = document.getElementsByClassName("");
 	
 	complete_button[0].addEventListener("click", function(){
 		var task_list = document.getElementsByClassName("completeTask");
