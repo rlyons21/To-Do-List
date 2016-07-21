@@ -20,7 +20,7 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
  <div class="mainContent">
 
 <button class="toDoBtn">To Do List</button>
-<% @incompleteTasks.each do |element| %>
+<% @incompleteTasks.each_with_index do |element, counter| %>
 	<ul class = "taskList">
 		<div class="task">
 		
@@ -32,10 +32,10 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 					<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
 				</form>
 				
-				<button class ="edit">E</button>
+				<button class ="edit" id="<%=counter%>">E</button>
 			</div>
 
-			<div class="ETmodalBackground">
+			<div class="ETmodalBackground" id="banana<%=counter%>">
 				<div class="editTaskModal">
 
 					<form method="post" action="/edit/process" >

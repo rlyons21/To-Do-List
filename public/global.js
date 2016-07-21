@@ -64,11 +64,15 @@ window.addEventListener("load", function(){
 	});
 	
 
+
+
 	for(i=0; i < editTask_button.length; i++){
 		editTask_button[i].addEventListener("click", function(){
-			var edit_task = document.getElementsByClassName("ETmodalBackground");
-
-			edit_task[1].style.display = "flex";
+			
+			var counter = this.getAttribute("id");
+			var edit_task = document.getElementById("banana" + counter);
+			
+			edit_task.style.display = "flex";
 
 		});
 		
