@@ -20,7 +20,7 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
  <div class="mainContent">
 
 <button class="toDoBtn">To Do List</button>
-<% @incompleteTasks.each_with_index do |element, counter| %>
+<% @incompleteTasks.each do |element| %>
 	<ul class = "taskList">
 		<div class="task">
 		
@@ -32,10 +32,10 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 					<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
 				</form>
 				
-				<button class ="edit" id="<%=counter%>">E</button>
+				<button class ="edit" id="<%=element[3]%>">E</button>
 			</div>
 
-			<div class="ETmodalBackground" id="banana<%=counter%>">
+			<div class="ETmodalBackground" id="modal<%=element[3]%>">
 				<div class="editTaskModal">
 
 					<form method="post" action="/edit/process" >
@@ -121,14 +121,78 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 					<input type="hidden" name="num" value ="<%= element[3]%>">
 					<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
 				</form>
-				<form method="post" action="/edit"> 
-					<input type="hidden" name="num" value ="<%= element[3]%>">
-					<span title="Edit Task"><input class ="delete-edit" type="image" src="/images/edit-icon.png" alt="E"></span>
-					<input type="hidden" name="status" value ="<%= element[0]%>">
-					<input type="hidden" name="task" value ="<%= element[2]%>">
-					<input type="hidden" name="person" value ="<%= element[1]%>">
-				</form>
+				<button class ="edit" id="<%=element[3]%>">E</button>
 			</div>
+
+			<div class="ETmodalBackground" id="modal<%=element[3]%>">
+				<div class="editTaskModal">
+
+					<form method="post" action="/edit/process" >
+							
+							<div>
+								<input class="enterTask" type="text" name="task" value="<%= element[2]  %>">
+							</div>
+							
+							<div>
+								<p class="editFamilyHeader">Family Member</p>
+							</div>
+							<div>
+								<div>
+								  <label>
+								   <input class="editNamesList" type="radio" name="person" value="Bob" <%= "checked" if element[1] == "Bob" %>>
+								    Bob
+								  </label>
+								</div>
+
+								<div>
+								  <label>
+								    <input class="editNamesList" type="radio" name="person" value="Mary" <%= "checked" if element[1] == "Mary" %>>
+								    Mary
+								  </label>
+								</div>
+
+								<div>
+								  <label>
+								    <input class="editNamesList" type="radio" name="person" value="Joe" <%= "checked" if element[1] == "Joe" %>>
+								    Joe
+								  </label>
+								</div>
+
+								<div>
+								  <label>
+								    <input class="editNamesList" type="radio" name="person" value="Lisa" <%= "checked" if element[1] == "Lisa" %>>
+								    Lisa
+								  </label>
+								</div>
+							</div>
+							<div>
+								<p class="editFamilyHeader">Status</p>
+							</div>
+							<div>
+								<div>
+								  <label>
+								    <input class="editNamesList" type="radio" name="status" value="i" <%= "checked" if element[0] == "i" %>>
+								    Incomplete
+								  </label>
+								</div>
+
+								<div>
+								  <label>
+								    <input class="editNamesList" type="radio" name="status" value="c" <%= "checked" if element[0] == "c" %>>
+								    Complete
+								  </label>
+								</div>
+							</div>
+
+							<input type="hidden" name="num" value="<%= element[3] %>">
+
+							<button  class="editaddSubmitButton" type="submit" value="Submit">Submit</button>
+					  		
+					</form>
+					<button class="cancelButton">Cancel</button>
+				</div>
+			</div>
+
 		
 		</div>
 

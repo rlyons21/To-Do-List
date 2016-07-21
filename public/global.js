@@ -70,9 +70,10 @@ window.addEventListener("load", function(){
 		editTask_button[i].addEventListener("click", function(){
 			
 			var counter = this.getAttribute("id");
-			var edit_task = document.getElementById("banana" + counter);
+			var edit_task_home = document.getElementById("modal" + counter);
+			var edit_task_filtered = document.getElementById("modalEdit" + counter);
 			
-			edit_task.style.display = "flex";
+			edit_task_home.style.display = "flex";
 
 		});
 		
