@@ -1,7 +1,9 @@
 window.addEventListener("load", function(){
+
 	complete_button = document.getElementsByClassName("completeBtn");
 	toDo_button = document.getElementsByClassName("toDoBtn");
-
+	addTask_button = document.getElementsByClassName("addTask");
+	cancelAddTask_button = document.getElementsByClassName("cancelButton");
 	
 	complete_button[0].addEventListener("click", function(){
 		var task_list = document.getElementsByClassName("completeTask");
@@ -31,4 +33,17 @@ window.addEventListener("load", function(){
 				}
 		}
 	});
+
+
+	addTask_button[0].addEventListener("click", function(){
+		var add_task = document.getElementsByClassName("modalBackground");
+
+			add_task[0].style.display = "flex";
+		});
+
+	cancelAddTask_button[0].addEventListener("click", function(){
+		var add_task = document.getElementsByClassName("modalBackground");
+		add_task[0].style.display = "none";
+	});
+
 });
