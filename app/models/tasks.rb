@@ -11,7 +11,7 @@ class Task
 			separatedTasks << l
 		end
 
-		# separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp]}
+		#separatedTasks.map {|x| [x[0], x[1], x[2], x[3].chomp]}
 		return separatedTasks
 	end
 
