@@ -1,8 +1,10 @@
+
+
 <div class="left">
 	<div class="navContent">
-		<form action="/new">
-			<input class = "addTask" type="submit" value ="Add a Task">
-		</form>
+		<button class="addTask">Add a Task</button>
+	
+	
 		<ul class=navLinks>
 			<li class="navigation"><a class="navLinks__link" href="/">All Tasks</a></li>
 			<li class="navigation"><a class="navLinks__link" href="/filtered?user=Bob">Bob</a></li>
@@ -17,10 +19,12 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
  -->
  <div class="mainContent">
 
-<h2 class="toDoTitle">To Do List</h2>
+<button class="toDoBtn">To Do List</button>
 <% @incompleteTasks.each do |element| %>
 	<ul class = "taskList">
 		<div class="task">
+		<li class = "taskList__task"><%= element[2] %></li>
+		<div class="icons">
 			<form method="post" action="/delete"> 
 				<input type="hidden" name="num" value ="<%= element[3]%>">
 				<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
@@ -32,33 +36,80 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 				<input type="hidden" name="task" value ="<%= element[2]%>">
 				<input type="hidden" name="person" value ="<%= element[1]%>">
 			</form>
-			<li class = "taskList__task"><%= element[2] %></li>
+			</div>
 		</div>
 	</ul>
 	
 
 <% end %>
 
-<h2 class="completeTitle">Completed Tasks</h2>
+<button class="completeBtn">Completed Tasks</button>
 <% @completedTasks.each do |element| %>
-	<ul class="taskList">
-
-		<div class="task">
-			<form method="post" action="/delete"> 
-				<input type="hidden" name="num" value ="<%= element[3]%>">
-				<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
-			</form>
-			<form method="post" action="/edit"> 
-				<input type="hidden" name="num" value ="<%= element[3]%>">
-				<span title="Edit Task"><input class ="delete-edit" type="image" src="/images/edit-icon.png" alt="E"></span>
-				<input type="hidden" name="status" value ="<%= element[0]%>">
-				<input type="hidden" name="task" value ="<%= element[2]%>">
-				<input type="hidden" name="person" value ="<%= element[1]%>">
-			</form>
-			<li class="taskList__task"><%= element[2] %></li>
+	<ul class="completeTaskList">
+		<div class="completeTask">
+		<li class="taskList__task"><%= element[2] %></li>
+			<div class="icons">
+				<form method="post" action="/delete"> 
+					<input type="hidden" name="num" value ="<%= element[3]%>">
+					<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
+				</form>
+				<form method="post" action="/edit"> 
+					<input type="hidden" name="num" value ="<%= element[3]%>">
+					<span title="Edit Task"><input class ="delete-edit" type="image" src="/images/edit-icon.png" alt="E"></span>
+					<input type="hidden" name="status" value ="<%= element[0]%>">
+					<input type="hidden" name="task" value ="<%= element[2]%>">
+					<input type="hidden" name="person" value ="<%= element[1]%>">
+				</form>
+			</div>
+		
 		</div>
 
 	</ul>
 <% end %>
 
+</div>
+
+
+
+
+<div class="modalBackground">
+	<div class="addTaskModal">
+
+		<form method="post" action="/new/process" >
+			<div><input class="enterTask" type="text" name="task" placeholder="Task..."></div>
+
+			<div>
+			  <label>
+			   <input class="addNamesList" type="radio" name="person" value="Bob" checked>
+			    Bob
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input class="addNamesList" type="radio" name="person" value="Mary">
+			    Mary
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input class="addNamesList" type="radio" name="person" value="Joe">
+			    Joe
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input class="addNamesList" type="radio" name="person" value="Lisa">
+			    Lisa
+			  </label>
+			</div>
+
+
+			<input class="editaddSubmitButton" type="submit">
+		</form>
+			<button class="cancelButton">Cancel</button>
+
+	</div>
 </div>

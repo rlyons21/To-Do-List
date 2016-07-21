@@ -80,40 +80,90 @@ body{
 	width:auto;
 	margin-left:200px;
 	margin-top:78px;
+	height:100vh;
 	padding-bottom:200px;
 	background-image: url(/images/background.jpg);
 	background-position: right bottom;
 }
 
-.toDoTitle{
-	text-decoration: underline;
-	margin-top:30px;
-	margin-bottom:15px;
-	margin-left:80px;
-}
-
-.completeTitle{
-	text-decoration: underline;
+.toDoBtn{
+	height:50px;
+	width:200px;
 	margin-top:30px;
 	margin-bottom:15px;
 	margin-left:40px;
+	border-radius:6px;
+	font-size: 16px;
+	font-family:Arial;
+}
+
+.completeBtn{
+	height:50px;
+	width:200px;
+	margin-top:30px;
+	margin-bottom:15px;
+	margin-left:40px;
+	border-radius:6px;
+	font-size: 16px;
+	font-family:Arial;
 }
 
 .task{
 	display:flex;
+	justify-content: space-between;
 	margin:3px 50px 3px 50px;
 	padding:5px;
 	border-radius:4px;
 	font-family:sans-serif;
 	background:rgba(255,255,255,0.7);
 }
+
+.completeTask{
+	display:flex;
+	justify-content: space-between;
+	margin:3px 50px 3px 50px;
+	padding:5px;
+	border-radius:4px;
+	font-family:sans-serif;
+	background:rgba(255,255,255,0.7);
+}
+
+.icons{
+	display:flex;
+}
+
 .taskList{
+	list-style: none;
+}
+
+.completeTaskList{
 	list-style: none;
 }
 
 .taskList__task{
 	margin-right:5px;
 	font-size:20px;
+}
+
+.addTaskModal{
+	background-color:white;
+	height:250px;
+	width: 400px;
+	text-align: center;
+	border-radius:4px;
+}
+
+.modalBackground{
+	position:fixed;
+	display:none;
+	top:0;
+	left:0;
+	min-height:100vh;
+	width:100%;
+	background: rgba(0, 0, 0, 0.8);
+	justify-content:center;
+	align-items:center;
+	z-index:100;
 }
 
 .editFamilyHeader {
@@ -137,12 +187,21 @@ body{
 }
 
 .editaddSubmitButton{
-	background-color:#FDFFAA;
-	color:black;
+	background-color:#4343FF;
+	color:white;
 	height:25px;
 	width:75px;
 	border-radius:6px;
 	margin-top:5px;
+	font-family:Arial;
+	font-size:14px;
+}
+
+.cancelButton{
+	margin-top:5px;
+	height:25px;
+	width:75px;
+	border-radius:6px;
 	font-family:Arial;
 	font-size:14px;
 }
@@ -152,11 +211,12 @@ body{
 	height:25px;
 	width:200px;
 	font-size:14px;
-	background-color:#E3DDFF;
+	background-color:#E7E7EA;
 
 }
 
 .delete-edit{
 	height:15px;
 	width:15px;
+	margin-right:5px;
 }
