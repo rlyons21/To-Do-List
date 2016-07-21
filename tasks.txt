@@ -1,18 +1,16 @@
 c|Mary|Mop the basement|52679669
 c|Lisa|Vacuum the rug|34587544
-i|Lisa|Clean the car|97845989
 i|Mary|Rake the leaves|95182081
 c|Mary|Feed the fish|3234981
-c|Joe|Trim the front hedges|68788894
 i|Lisa|Hoist the jib|82926181
-c|Joe|Mop the basement|373441
 i|Joe|feed the lizard|42707047
 i|Mary|walk the dog|97665158
 i|Joe|Make your bed|29204884
-i|Mary|Run the washer|80005611
 i|Joe|Change the AC filter|51490494
 i|Bob|Walk the hamster |13967643
 i|Bob|Dust the book shelves|84843456
 i|Mary|Nail the picture on the door|6244894
 i|Lisa|Walk the hamster|24492433
 i|Mary|Read the news|51267339
+i|Mary|Run the dryer|40466241
+c|Lisa|Trim the front hedges|87577618

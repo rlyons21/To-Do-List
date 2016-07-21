@@ -32,7 +32,8 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 					<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
 				</form>
 				
-				<button class ="edit" id="<%=element[3]%>">E</button>
+				<span title="Edit Task"><input type="image" src="/images/edit-icon.png" name="edit" class = "edit" id="<%=element[3]%>"/></span>
+
 			</div>
 
 			<div class="ETmodalBackground" id="modal<%=element[3]%>">
@@ -121,7 +122,7 @@ TODO - Reconsider BEM structure below. Each task should be a <li>.
 					<input type="hidden" name="num" value ="<%= element[3]%>">
 					<span title="Delete Task"><input class ="delete-edit" type="image" src="/images/delete-icon.png" alt="D"></span>
 				</form>
-				<button class ="edit" id="<%=element[3]%>">E</button>
+				<span title="Edit Task"><input type="image" src="/images/edit-icon.png" name="edit" class = "edit" id="<%=element[3]%>"/></span>
 			</div>
 
 			<div class="ETmodalBackground" id="modal<%=element[3]%>">

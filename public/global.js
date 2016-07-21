@@ -4,7 +4,7 @@ window.addEventListener("load", function(){
 	toDo_button = document.getElementsByClassName("toDoBtn");
 	addTask_button = document.getElementsByClassName("addTask");
 	cancel_button = document.getElementsByClassName("cancelButton");
-	ATcancel_button = document.getElementsByClassName("ATcancelButton");
+	addTaskCancel_button = document.getElementsByClassName("ATcancelButton");
 	editTask_button = document.getElementsByClassName("edit");
 	
 	
@@ -58,7 +58,7 @@ window.addEventListener("load", function(){
 	}
 
 
-	ATcancel_button[0].addEventListener("click", function(){
+	addTaskCancel_button[0].addEventListener("click", function(){
 		var add_task = document.getElementsByClassName("ATmodalBackground");
 		add_task[0].style.display = "none";
 	});
