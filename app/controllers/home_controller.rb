@@ -10,6 +10,15 @@ MyApp.get "/new" do
 	erb :"new"
 end
 
+MyApp.get "/api/tasks" do
+	require 'json'
+	tasks_api = Task.convertToHash("tasks.txt")
+	tasks_api.to_json
+	tasks_api
+	@json_info = tasks_api
+	erb :"api"
+
+end
 
 MyApp.post "/new/process" do
 

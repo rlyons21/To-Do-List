@@ -85,7 +85,9 @@ body{
 	background-image: url(/images/background.jpg);
 	background-position: right bottom;
 }
-
+.mainContent--json{
+	background-image: none;
+}
 .toDoBtn{
 	height:50px;
 	width:200px;

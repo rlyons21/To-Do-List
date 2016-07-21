@@ -179,6 +179,24 @@ class Task
 		return emailHash["message"]
 	end
 
+	def Task.convertToHash(filename)
+		taskArray = Task.searchForName(filename)
+		taskHash = {}
+		newArray = Array.new
+
+		taskArray.each do |task|
+			individualTaskHash = {}
+
+			individualTaskHash["status"] = task[0]
+			individualTaskHash["familyMember"] = task[1]
+			individualTaskHash["taskDescription"] = task[2]
+			individualTaskHash["taskID"] = task[3].chomp
+
+			newArray << individualTaskHash
+		end
+		taskHash["tasks"] = newArray
+		return taskHash
+	end
 # This is the end for the class	Task.
 end
 
