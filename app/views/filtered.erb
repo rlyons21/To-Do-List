@@ -2,9 +2,7 @@
 
 <div class="left">
 	<div class="navContent">
-		<form action="/new">
-			<input class = "addTask" type="submit" value ="Add a Task">
-		</form>
+		<button class="addTask">Add a Task</button>
 
 		<ul class=navLinks>
 			<li class="navigation"><a class="navLinks__link" href="/">All Tasks</a></li>
@@ -76,4 +74,46 @@
 	<% else %>
 		<p> There are no tasks! </p>
 	<% end %>
+</div>
+
+<div class="modalBackground">
+	<div class="addTaskModal">
+
+		<form method="post" action="/new/process" >
+			<div><input class="enterTask" type="text" name="task" placeholder="Task..."></div>
+
+			<div>
+			  <label>
+			   <input class="addNamesList" type="radio" name="person" value="Bob" checked>
+			    Bob
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input class="addNamesList" type="radio" name="person" value="Mary">
+			    Mary
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input class="addNamesList" type="radio" name="person" value="Joe">
+			    Joe
+			  </label>
+			</div>
+
+			<div>
+			  <label>
+			    <input class="addNamesList" type="radio" name="person" value="Lisa">
+			    Lisa
+			  </label>
+			</div>
+
+
+			<input class="editaddSubmitButton" type="submit">
+		</form>
+			<button class="cancelButton">Cancel</button>
+
+	</div>
 </div>
