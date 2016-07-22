@@ -6,10 +6,6 @@ MyApp.get "/" do
 
 end
 
-MyApp.get "/new" do
-	erb :"new"
-end
-
 
 MyApp.post "/new/process" do
 

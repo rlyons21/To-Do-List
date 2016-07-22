@@ -18,10 +18,10 @@ body{
 	width:100%;
 	position:absolute;
 	top:0;
-	background-color: #ACFF9C;
+	background-color: #3F5644;
 	font-family:Cursive;
 	font-size:24px;
-	color: #203719;
+	color: #E7E8DC;
 	text-align:center;
 }
 
@@ -36,7 +36,7 @@ body{
 	width:200px;
 	padding-top: 20px;
 	top:0px;
-	background-color:#B7F6FF;
+	background-color:white;
 }
 
 .navContent{
@@ -65,15 +65,15 @@ body{
 }
 
 .addTask:hover{
-	background-color:white;
-	color:black;
+	background-color:#3F5644;
+	color:#E7E8DC;
 }
 
 .navLinks__link{
 	text-decoration: none;
 	font-family:Arial;
 	font-size:18px;
-	color:black;
+	color:#3F5644;
 }
 
 .mainContent{
@@ -153,7 +153,28 @@ body{
 	border-radius:4px;
 }
 
-.modalBackground{
+.editTaskModal{
+	background-color:white;
+	height:360px;
+	width: 400px;
+	text-align: center;
+	border-radius:4px;
+}
+
+.ATmodalBackground{
+	position:fixed;
+	display:none;
+	top:0;
+	left:0;
+	min-height:100vh;
+	width:100%;
+	background: rgba(0, 0, 0, 0.8);
+	justify-content:center;
+	align-items:center;
+	z-index:100;
+}
+
+.ETmodalBackground{
 	position:fixed;
 	display:none;
 	top:0;
@@ -167,7 +188,8 @@ body{
 }
 
 .editFamilyHeader {
-	font-size: 150%;
+	text-decoration: underline;
+	font-size: 17px;
 	font:Arial;
 	margin-top:10px;
 }
@@ -176,11 +198,6 @@ body{
 	font:Arial;
 }
 
-.addFamilyHeader {
-	font-size: 150%;
-	font:Arial;
-	margin-top:10px;
-}
 .addNamesList {
 	margin-top:10px;
 	font:Arial;
@@ -206,6 +223,15 @@ body{
 	font-size:14px;
 }
 
+.ATcancelButton{
+	margin-top:5px;
+	height:25px;
+	width:75px;
+	border-radius:6px;
+	font-family:Arial;
+	font-size:14px;
+}
+
 .enterTask{
 	margin-top:30px;
 	height:25px;
@@ -216,6 +242,12 @@ body{
 }
 
 .delete-edit{
+	height:15px;
+	width:15px;
+	margin-right:5px;
+}
+
+.edit{
 	height:15px;
 	width:15px;
 	margin-right:5px;
