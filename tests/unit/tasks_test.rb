@@ -64,7 +64,7 @@ class TaskTest < Minitest::Test
         assert_equal("fakeemail1@gmail.com", results)
     end
 
-    def test_send_email_to_family_memeber
+    def test_send_email_to_family_member
         results = Task.sendTaskReminder("michaeljducey@gmail.com", "Bob", "Make Paint")
         assert_equal("Queued. Thank you.", results)
     end
