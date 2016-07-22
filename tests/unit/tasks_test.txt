@@ -1,19 +1,8 @@
-i|Joe|Make beds|68364456
-i|Mary|Run the dryer|24252905
-i|Bob|Walk the hamster |1243145
-c|Mary|Mop the basement|52679669
-c|Lisa|Vacuum the rug|34587544
-i|Bob|Change the AC filter|88008004
-i|Bob|Dust the book shelves|68249195
-i|Lisa|Clean the car|97845989
-i|Mary|Rake the leaves|95182081
-c|Mary|Feed the fish|3234981
-c|Lisa|Walk the hamster|89166161
-c|Mary|Read the news|26207105
-c|Joe|Trim the front hedges|68788894
-i|Lisa|Hoist the jib|82926181
-i|Mary|Nail the picture on the wall|66757276
-c|Joe|Mop the basement|373441
-i|Mary|Fluff a pillow|8855455
-i|Joe|feed the lizard|42707047
-i|Bob|this had better send an email|81323446
+i|Bob|Scoop the cat litter|98174236
+c|Bob|Mop the mud room floor|38374236
+i|Mary|Clean the fish bowl|28374416
+c|Mary|Change the AC filter|28354455
+i|Joe|Sweep the porch|68364455
+c|Joe|Make beds|68364456
+i|Lisa|Vacuum the living room carpet|68364459
+c|Lisa|Do the dishes|98174836
