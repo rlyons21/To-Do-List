@@ -52,7 +52,9 @@ body{
 .navigation{
 	margin-bottom:10px;
 }
-
+.navigation__api{
+	margin-bottom:2px;
+}
 .addTask{
 	text-align:center;
 	background-color: #555555;
@@ -76,6 +78,18 @@ body{
 	color:#3F5644;
 }
 
+.apiLinks{
+	position:absolute;
+	bottom:20px;
+}
+
+.navLinks__apiLinks{
+	text-decoration: none;
+	font-family:Arial;
+	font-size:12px;
+	color:#3F5644;
+}
+
 .mainContent{
 	width:auto;
 	margin-left:200px;
@@ -85,9 +99,11 @@ body{
 	background-image: url(/images/background.jpg);
 	background-position: right bottom;
 }
+
 .mainContent--json{
 	background-image: none;
 }
+
 .toDoBtn{
 	height:50px;
 	width:200px;

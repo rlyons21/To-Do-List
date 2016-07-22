@@ -15,10 +15,13 @@ MyApp.get "/api/tasks" do
 	require 'json'
 	tasks_api = Task.convertToHash("tasks.txt")
 	return tasks_api.to_json
-	
-
 end
 
+MyApp.get "/api/individualfamilymember" do
+	require 'json'
+	family_member_tasks_api = Task.convertToHashForFamilyMember("tasks.txt", params[:person])
+	return family_member_tasks_api.to_json
+end
 
 MyApp.post "/new/process" do
 

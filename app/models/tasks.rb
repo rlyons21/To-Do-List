@@ -197,6 +197,25 @@ class Task
 		taskHash["tasks"] = newArray
 		return taskHash
 	end
+
+	def Task.convertToHashForFamilyMember(filename, name)
+		familyTaskArray = Task.searchForFamilyMember(filename, name)
+		familyTaskHash = {}
+		newArray = Array.new
+
+		familyTaskArray.each do |task|
+			familyMembersTaskHash = {}
+
+			familyMembersTaskHash["status"] = task[0]
+			familyMembersTaskHash["familyMember"] = task[1]
+			familyMembersTaskHash["taskDescription"] = task[2]
+			familyMembersTaskHash["taskID"] = task[3].chomp
+
+			newArray << familyMembersTaskHash
+		end
+		familyTaskHash["tasks"] = newArray
+		return familyTaskHash
+	end
 # This is the end for the class	Task.
 end
 
