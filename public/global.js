@@ -69,11 +69,10 @@ window.addEventListener("load", function(){
 	for(i=0; i < editTask_button.length; i++){
 		editTask_button[i].addEventListener("click", function(){
 			
-			var counter = this.getAttribute("id");
-			var edit_task_home = document.getElementById("modal" + counter);
-			var edit_task_filtered = document.getElementById("modalEdit" + counter);
+			var task_id = this.getAttribute("id");
+			var edit_task = document.getElementById("modal" + task_id);
 			
-			edit_task_home.style.display = "flex";
+			edit_task.style.display = "flex";
 
 		});
 		
