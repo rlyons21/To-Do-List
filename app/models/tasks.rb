@@ -165,7 +165,7 @@ class Task
 
 	# This is the function that uses the mailgun API to send an email.  It contains the email content.
 
-	def Task.sendTaskReminder(email, name)
+	def Task.sendTaskReminder(email, name, task)
 		require_relative "secret.rb"
 		require "json"
 		emailHash = Hash.new
@@ -174,7 +174,7 @@ class Task
 		:from => "Mailgun Sandbox <postmaster@sandboxfd37c2256d46459990db24129a969463.mailgun.org>",
 		:to => email,
 		:subject => "Hello #{name}",
-		:text => "Hello #{name}, You have been assigned a new task on the Johnson Family To-Do List.  Please visit the site to see your new task."
+		:text => "Hello #{name}, You have been assigned a new task: #{task}.  Please visit the Johnson Family To-Do List to see all your tasks."
 		emailHash = JSON.parse(emailSent)
 		return emailHash["message"]
 	end
