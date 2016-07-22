@@ -7,6 +7,21 @@ MyApp.get "/" do
 end
 
 
+MyApp.get "/new" do
+	erb :"new"
+end
+
+MyApp.get "/api/tasks" do
+	require 'json'
+	tasks_api = Task.convertToHash("tasks.txt")
+	tasks_api.to_json
+	tasks_api
+	@json_info = tasks_api
+	erb :"api"
+
+end
+
+
 MyApp.post "/new/process" do
 
 	@rightEmail = Task.sortByName(params[:person], "Bob", "Mary", "Joe", "Lisa", "michaeljducey@gmail.com", "michaeljducey@gmail.com", "mhughes27@gmail.com", "mhughes27@gmail.com")
