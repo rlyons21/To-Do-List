@@ -9,7 +9,6 @@ i|Mary|Nail the picture on the wall|66757276
 i|Mary|Rake the leaves|95182081
 c|Mary|Feed the fish|3234981
 i|Joe|feed the lizard|42707047
-i|Joe|Wash the boat|65948591
 i|Joe|Make your bed|29204884
 i|Bob|Walk the hamster |13967643
 i|Bob|Dust the book shelves|84843456

@@ -1,16 +1,16 @@
-
  <div class="mainContent">
 
 <button class="toDoBtn">To Do List</button>
 <% @incompleteTasks.each do |element| %>
 	<ul class = "taskList">
-		<div class="task" id="task<%= element[3]%>">
+		<div class="task">
 		
 			<li class = "taskList__task"><%= element[2] %></li>
 			
 			<div class="icons">
 				<form method="post" action="/delete"> 
-					<span title="Delete Task"><input class ="delete" id="<%= element[3]%>" type="image" src="/images/delete-icon.png" alt="D"></span>
+					<input type="hidden" name="num" value ="<%= element[3]%>">
+					<span title="Delete Task"><input class ="delete" type="image" src="/images/delete-icon.png" alt="D"></span>
 				</form>
 				
 				<span title="Edit Task"><input type="image" src="/images/edit-icon.png" name="edit" class = "edit" id="<%=element[3]%>"/></span>

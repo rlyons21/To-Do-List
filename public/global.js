@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
 	cancel_button = document.getElementsByClassName("cancelButton");
 	addTaskCancel_button = document.getElementsByClassName("ATcancelButton");
 	editTask_button = document.getElementsByClassName("edit");
-	delete_button = document.getElementsByClassName("delete");
+
 	
 
 
@@ -78,17 +78,6 @@ window.addEventListener("load", function(){
 		
 	}
 
-	for(i=0; i<delete_button.length; i++){
-		delete_button[i].addEventListener("click", function(e){
-			e.preventDefault();
 
-			var id = this.getAttribute("id");
-			debugger;
-			var deleted = document.getElementById("task" + id);
-
-			deleted.style.display = "none";
-
-		});
-	}
 
 });

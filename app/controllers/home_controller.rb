@@ -46,7 +46,7 @@ end
 
 
 
-MyApp.post '/delete' do
+MyApp.get '/delete' do
 	Task.deleteTask(params[:num],"tasks.txt")
-	redirect '/'
+	erb :"home"
 end
