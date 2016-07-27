@@ -7,10 +7,6 @@ MyApp.get "/" do
 end
 
 
-MyApp.get "/new" do
-	erb :"new"
-end
-
 MyApp.get "/api/tasks" do
 	require 'json'
 	tasks_api = Task.convertToHash("tasks.txt")
