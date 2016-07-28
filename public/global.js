@@ -1,11 +1,12 @@
 window.addEventListener("load", function(){
 
-	complete_button = document.getElementsByClassName("completeBtn");
-	toDo_button = document.getElementsByClassName("toDoBtn");
-	addTask_button = document.getElementsByClassName("addTask");
-	cancel_button = document.getElementsByClassName("cancelButton");
-	addTaskCancel_button = document.getElementsByClassName("ATcancelButton");
-	editTask_button = document.getElementsByClassName("edit");
+	var complete_button = document.getElementsByClassName("completeBtn");
+	var toDo_button = document.getElementsByClassName("toDoBtn");
+	var addTask_button = document.getElementsByClassName("addTask");
+	var cancel_button = document.getElementsByClassName("cancelButton");
+	var addTaskCancel_button = document.getElementsByClassName("ATcancelButton");
+	var editTask_button = document.getElementsByClassName("edit");
+	var delete_btn = document.getElementsByClassName("delete");
 
 	
 
@@ -78,6 +79,25 @@ window.addEventListener("load", function(){
 		
 	}
 
+	for(i=0; i < delete_btn.length; i++){
+		delete_btn[i].addEventListener("click", function(form){
+			form.preventDefault();
+			var id = this.getAttribute("id");
+			var delete_me = document.getElementById("delete" + id);
+			delete_me.style.display = "none";
 
 
+			var delete_task = new XMLHttpRequest();
+
+			delete_task.addEventListener("load", function(){
+				alert("You have just deleted a task");
+
+			});
+
+			delete_task.open("get", "/delete?num=" + id);
+			delete_task.send();
+		});
+	}
+
+	debugger;
 });

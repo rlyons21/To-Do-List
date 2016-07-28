@@ -48,5 +48,5 @@ end
 
 MyApp.get '/delete' do
 	Task.deleteTask(params[:num],"tasks.txt")
-	erb :"home"
+	
 end
